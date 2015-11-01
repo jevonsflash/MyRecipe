@@ -1,0 +1,60 @@
+﻿<Page
+    x:Class="MyRecipe.MainPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:MyRecipe"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:uc="using:MyRecipe.MyUserControl"
+    mc:Ignorable="d">
+    <Page.Resources>
+        <ResourceDictionary>
+            <ResourceDictionary.ThemeDictionaries>
+                <ResourceDictionary x:Key="Default">
+                    <ImageBrush x:Key="BackgroundImageBrush" ImageSource="Assets/HubBackground.png"/>
+                </ResourceDictionary>
+                <ResourceDictionary x:Key="HighContrast">
+                    <ImageBrush x:Key="HubBackgroundImageBrush" ImageSource="{x:Null}"/>
+                </ResourceDictionary>
+            </ResourceDictionary.ThemeDictionaries>
+            <DataTemplate x:Key="HubSectionHeaderTemplate">
+                <TextBlock Margin="0,0,0,-9.5" Text="{Binding}"/>
+            </DataTemplate>
+
+        </ResourceDictionary>
+    </Page.Resources>
+    <Grid Background="{ThemeResource BackgroundImageBrush}">
+        <Pivot >
+            <PivotItem Header="嘿嘿">
+                <ListView
+                    x:Name="HubSection1"
+                        ItemsSource="{Binding Content}"
+                        IsItemClickEnabled="True"
+                        >
+                    <ListView.ItemTemplate>
+                        <DataTemplate>
+                            <uc:ItemControl></uc:ItemControl>
+                        </DataTemplate>
+                    </ListView.ItemTemplate>
+                </ListView>
+
+            </PivotItem>
+            <PivotItem>
+                <ListView
+                    x:Name="HubSection2"
+                        ItemsSource="{Binding Content}"
+                        IsItemClickEnabled="True"
+                        >
+                    <ListView.ItemTemplate>
+                        <DataTemplate>
+                            <uc:ItemControl></uc:ItemControl>
+                        </DataTemplate>
+                    </ListView.ItemTemplate>
+                </ListView>
+
+            </PivotItem>
+
+        </Pivot>
+    </Grid>
+
+</Page>

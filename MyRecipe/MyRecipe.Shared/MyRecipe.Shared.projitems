@@ -1,0 +1,48 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <MSBuildAllProjects>$(MSBuildAllProjects);$(MSBuildThisFileFullPath)</MSBuildAllProjects>
+    <HasSharedItems>true</HasSharedItems>
+    <SharedGUID>67cedb04-fb58-4b0c-8873-44f53763e4f5</SharedGUID>
+  </PropertyGroup>
+  <PropertyGroup Label="Configuration">
+    <Import_RootNamespace>MyRecipe</Import_RootNamespace>
+  </PropertyGroup>
+  <ItemGroup>
+    <ApplicationDefinition Include="$(MSBuildThisFileDirectory)App.xaml">
+      <SubType>Designer</SubType>
+    </ApplicationDefinition>
+    <Compile Include="$(MSBuildThisFileDirectory)App.xaml.cs">
+      <DependentUpon>App.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)Helper\HttpHelper.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Helper\StaticURLHelper.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)MainPage.xaml.cs">
+      <DependentUpon>MainPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)Model\BaseMap.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Model\BodyMap.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Model\CookShowItem.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Model\ItemControlTemplate.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Model\KeyWordsMap.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Model\UrlResult.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)MyUserControl\ItemControl.xaml.cs">
+      <DependentUpon>ItemControl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)Server\CookServer.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Server\MapServer.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Page Include="$(MSBuildThisFileDirectory)MainPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="$(MSBuildThisFileDirectory)MyUserControl\ItemControl.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="$(MSBuildThisFileDirectory)cook.xml" />
+  </ItemGroup>
+</Project>
