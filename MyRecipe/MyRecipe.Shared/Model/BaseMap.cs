@@ -18,5 +18,7 @@ namespace MyRecipe.Model
         public string name { get; set; }
         public int seq { get; set; }
         public string title { get; set; }
+        public int ext { get; set; }
+        public List<BaseMap> BaseMaps { get; set; }
     }
 }

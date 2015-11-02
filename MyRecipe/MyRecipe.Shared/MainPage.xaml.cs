@@ -1,4 +1,5 @@
 ﻿using MyRecipe.Model;
+using MyRecipe.ViewModel;
 using System;
 using System.Collections.Generic;
 using System.IO;
@@ -26,24 +27,7 @@ namespace MyRecipe
         public MainPage()
         {
             this.InitializeComponent();
-            this.HubSection1.DataContext = new ContentTemplate();
+            this.DataContext = new MainPageViewModel();
         }
-    }
-    public class ContentTemplate
-    {
-        public ContentTemplate()
-        {
-            List<SubCategoryItem> list = new List<SubCategoryItem>();
-            list.Add(new SubCategoryItem() { Title = "一个" });
-            list.Add(new SubCategoryItem() { Title = "这是第" });
-            list.Add(new SubCategoryItem() { Title = "这是第" });
-            list.Add(new SubCategoryItem() { Title = "这是第4个" });
-            list.Add(new SubCategoryItem() { Title = "这是第5个" });
-            Content = new List<CategoryItem>();
-            Content.Add(new CategoryItem() { Title = "hehe", Items = list });
-            Content.Add(new CategoryItem() { Title = "hehe2", Items = list });
-            Content.Add(new CategoryItem() { Title = "hehe3", Items = list });
-        }
-        public List<CategoryItem> Content { get; set; }
     }
 }

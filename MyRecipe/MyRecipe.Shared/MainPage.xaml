@@ -27,8 +27,9 @@
         <Pivot >
             <PivotItem Header="嘿嘿">
                 <ListView
-                    x:Name="HubSection1"
-                        ItemsSource="{Binding Content}"
+                    x:Name="HubSection1" 
+                        ItemsSource="{Binding SectionCategory}"
+                        SelectedItem="{Binding SelectedCategory}"
                         IsItemClickEnabled="True"
                         >
                     <ListView.ItemTemplate>
@@ -42,12 +43,24 @@
             <PivotItem>
                 <ListView
                     x:Name="HubSection2"
-                        ItemsSource="{Binding Content}"
+                        ItemsSource="{Binding SectionPopular}"
                         IsItemClickEnabled="True"
                         >
                     <ListView.ItemTemplate>
                         <DataTemplate>
-                            <uc:ItemControl></uc:ItemControl>
+                        </DataTemplate>
+                    </ListView.ItemTemplate>
+                </ListView>
+
+            </PivotItem>
+            <PivotItem>
+                <ListView
+                    x:Name="HubSection3"
+                        ItemsSource="{Binding SectionLatest}"
+                        IsItemClickEnabled="True"
+                        >
+                    <ListView.ItemTemplate>
+                        <DataTemplate>
                         </DataTemplate>
                     </ListView.ItemTemplate>
                 </ListView>

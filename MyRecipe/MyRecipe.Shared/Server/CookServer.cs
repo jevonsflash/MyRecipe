@@ -11,7 +11,7 @@ namespace MyRecipe.Server
 {
     public class CookServer
     {
-        public IList<Model.CookShowItem> CookShowDeserializer(string jsonStr)
+        public List<Model.CookShowItem> CookShowDeserializer(string jsonStr)
         {
             int total = 0;
             List<Model.CookShowItem> cookShowItemModelList = new List<Model.CookShowItem>();
