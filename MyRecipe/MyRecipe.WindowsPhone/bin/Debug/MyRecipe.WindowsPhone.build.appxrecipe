@@ -24,6 +24,9 @@
     <AppxPackagedFile Include="D:\Project\C#\test\MyRecipe\packages\Newtonsoft.Json.7.0.1\lib\portable-net45+wp80+win8+wpa81+dnxcore50\Newtonsoft.Json.dll">
       <PackagePath>Newtonsoft.Json.dll</PackagePath>
     </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\Project\C#\test\MyRecipe\MyRecipe\MyRecipe.WindowsPhone\Assets\bg1.jpg">
+      <PackagePath>Assets\bg1.jpg</PackagePath>
+    </AppxPackagedFile>
     <AppxPackagedFile Include="D:\Project\C#\test\MyRecipe\MyRecipe\MyRecipe.WindowsPhone\Assets\HubBackground.theme-dark.png">
       <PackagePath>Assets\HubBackground.theme-dark.png</PackagePath>
     </AppxPackagedFile>
@@ -54,8 +57,11 @@
       <PackagePath>Assets\WideLogo.scale-240.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="D:\Project\C#\test\MyRecipe\MyRecipe\MyRecipe.Shared\cook.xml">
-      <PackagePath>cook.xml</PackagePath>
+    <AppxPackagedFile Include="D:\Project\C#\test\MyRecipe\MyRecipe\MyRecipe.Shared\Img\Header.png">
+      <PackagePath>Img\Header.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\Project\C#\test\MyRecipe\MyRecipe\MyRecipe.Shared\Cook.xml">
+      <PackagePath>Cook.xml</PackagePath>
     </AppxPackagedFile>
     <AppxPackagedFile Include="D:\Project\C#\test\MyRecipe\MyRecipe\MyRecipe.WindowsPhone\bin\Debug\MyRecipe.WindowsPhone.xr.xml">
       <PackagePath>MyRecipe.WindowsPhone.xr.xml</PackagePath>
@@ -63,11 +69,14 @@
     <AppxPackagedFile Include="D:\Project\C#\test\MyRecipe\MyRecipe\MyRecipe.WindowsPhone\bin\Debug\App.xbf">
       <PackagePath>App.xbf</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="D:\Project\C#\test\MyRecipe\MyRecipe\MyRecipe.WindowsPhone\bin\Debug\MainPage.xbf">
-      <PackagePath>MainPage.xbf</PackagePath>
-    </AppxPackagedFile>
     <AppxPackagedFile Include="D:\Project\C#\test\MyRecipe\MyRecipe\MyRecipe.WindowsPhone\bin\Debug\MyUserControl\ItemControl.xbf">
       <PackagePath>MyUserControl\ItemControl.xbf</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\Project\C#\test\MyRecipe\MyRecipe\MyRecipe.WindowsPhone\bin\Debug\DetailPage.xbf">
+      <PackagePath>DetailPage.xbf</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\Project\C#\test\MyRecipe\MyRecipe\MyRecipe.WindowsPhone\bin\Debug\MainPage.xbf">
+      <PackagePath>MainPage.xbf</PackagePath>
     </AppxPackagedFile>
     <AppxPackagedFile Include="D:\Project\C#\test\MyRecipe\MyRecipe\MyRecipe.WindowsPhone\bin\Debug\resources.pri">
       <PackagePath>resources.pri</PackagePath>

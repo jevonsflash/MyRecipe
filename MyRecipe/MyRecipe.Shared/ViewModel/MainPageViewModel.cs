@@ -7,15 +7,16 @@ using System.ComponentModel;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Input;
+using Windows.UI.Xaml;
+using Windows.UI.Xaml.Controls;
 
 namespace MyRecipe.ViewModel
 {
-    public class MainPageViewModel : INotifyPropertyChanged ,ICommand
+    public class MainPageViewModel : INotifyPropertyChanged, ICommand
     {
-        
+
         private MapServer mapser = new MapServer();
         private CookServer cookser = new CookServer();
-        
 
         private List<BaseMap> sectionCategory;
 
@@ -63,10 +64,10 @@ namespace MyRecipe.ViewModel
             GetSectionCategory();
 
         }
+
         public async Task GetSectionCategory()
         {
-
-            sectionCategory = await mapser.ReadFilterMap("cook");
+            SectionCategory = await mapser.ReadFilterMap("Cook");
         }
 
         private void GetJSON(string url, Dictionary<string, string> dic)
@@ -78,7 +79,7 @@ namespace MyRecipe.ViewModel
 
         private void Ht_FileWatchEvent(object sender, CompleteEventArgs e)
         {
-            sectionPopular = cookser.CookShowDeserializer(e.Node);
+            SectionPopular = cookser.CookShowDeserializer(e.Node);
         }
 
         private void NotifyPropertyChanged(string propertyName)

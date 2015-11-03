@@ -35,6 +35,7 @@ namespace MyRecipe.Server
             XmlSerializer ser = new XmlSerializer(typeof(List<Model.BaseMap>), new XmlRootAttribute(xmlRootName));
             XmlReader xr = xd.CreateReader();
             List<Model.BaseMap> obs = (List<Model.BaseMap>)ser.Deserialize(xr);
+            
             return obs;
         }
     }

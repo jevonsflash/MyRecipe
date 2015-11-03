@@ -1,4 +1,6 @@
-cook.xml
+Cook.xml
+Img\Header.png
+Assets\bg1.jpg
 Assets\HubBackground.theme-dark.png
 Assets\HubBackground.theme-light.png
 Assets\Logo.scale-240.png
@@ -8,6 +10,7 @@ Assets\Square71x71Logo.scale-240.png
 Assets\StoreLogo.scale-240.png
 Assets\WideLogo.scale-240.png
 App.xbf
+DetailPage.xbf
 MainPage.xbf
 MyRecipe.WindowsPhone.xr.xml
 MyUserControl\ItemControl.xbf

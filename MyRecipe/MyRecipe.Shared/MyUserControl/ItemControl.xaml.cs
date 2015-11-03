@@ -19,23 +19,36 @@ namespace MyRecipe.MyUserControl
 {
     public sealed partial class ItemControl : UserControl
     {
+        public bool IsFlod { get; set; } = true;
         public ItemControl()
         {
             this.InitializeComponent();
+            Loaded += ItemControl_Loaded;
+
         }
 
-        private void BTNFlip_Click(object sender, RoutedEventArgs e)
+        private void ItemControl_Loaded(object sender, RoutedEventArgs e)
         {
-            if ((bool)this.BTNFlip.IsChecked)
+            InitGrid();
+        }
+
+        private void Grid_Tapped(object sender, TappedRoutedEventArgs e)
+        {
+            IsFlod = !IsFlod;
+            InitGrid();
+
+        }
+
+        private void InitGrid()
+        {
+            if (IsFlod)
             {
                 this.GVCon.MaxHeight = 0;
             }
             else
             {
                 this.GVCon.MaxHeight = double.MaxValue;
-
             }
-
         }
     }
 }

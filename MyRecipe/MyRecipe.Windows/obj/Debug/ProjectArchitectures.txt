@@ -1,0 +1,1 @@
+D:\Project\C#\test\MyRecipe\MyRecipe\MyRecipe.Windows\MyRecipe.Windows.csproj;neutral

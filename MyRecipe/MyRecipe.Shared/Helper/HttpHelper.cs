@@ -35,7 +35,7 @@ namespace MyRecipe.Helper
 
 
             //发送POST数据  
-            if (!(parameters == null || parameters.Count == 0))
+            if (!(parameters == null))
             {
                 StringBuilder buffer = new StringBuilder();
                 int i = 0;

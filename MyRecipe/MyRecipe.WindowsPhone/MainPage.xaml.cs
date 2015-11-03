@@ -27,7 +27,22 @@ namespace MyRecipe
         public MainPage()
         {
             this.InitializeComponent();
-            this.DataContext = new MainPageViewModel();
+            MainPageViewModel data = new MainPageViewModel();
+            this.DataContext = data;
+
+        }
+
+        private void ListView_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            int id = (sender as CookShowItem).id;
+            Helper.NavigationHelpr.NavigateTo(typeof(DetailPage), id);
+        }
+
+        private void ListView_ItemClick(object sender, ItemClickEventArgs e)
+        {
+            int id = (e.ClickedItem as CookShowItem).id;
+            Helper.NavigationHelpr.NavigateTo(typeof(DetailPage), id);
+
         }
     }
 }

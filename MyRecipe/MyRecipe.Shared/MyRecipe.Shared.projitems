@@ -16,10 +16,8 @@
       <DependentUpon>App.xaml</DependentUpon>
     </Compile>
     <Compile Include="$(MSBuildThisFileDirectory)Helper\HttpHelper.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Helper\NavigationHelper.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Helper\StaticURLHelper.cs" />
-    <Compile Include="$(MSBuildThisFileDirectory)MainPage.xaml.cs">
-      <DependentUpon>MainPage.xaml</DependentUpon>
-    </Compile>
     <Compile Include="$(MSBuildThisFileDirectory)Model\BaseMap.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Model\BodyMap.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Model\CookShowItem.cs" />
@@ -34,16 +32,13 @@
     <Compile Include="$(MSBuildThisFileDirectory)ViewModel\MainPageViewModel.cs" />
   </ItemGroup>
   <ItemGroup>
-    <Page Include="$(MSBuildThisFileDirectory)MainPage.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
     <Page Include="$(MSBuildThisFileDirectory)MyUserControl\ItemControl.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
   </ItemGroup>
   <ItemGroup>
-    <Content Include="$(MSBuildThisFileDirectory)cook.xml" />
+    <Content Include="$(MSBuildThisFileDirectory)Cook.xml" />
+    <Content Include="$(MSBuildThisFileDirectory)Img\Header.png" />
   </ItemGroup>
 </Project>

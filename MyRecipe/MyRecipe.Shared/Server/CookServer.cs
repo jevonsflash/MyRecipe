@@ -62,7 +62,7 @@ namespace MyRecipe.Server
             oCookShowItem.img = img;//图片
             oCookShowItem.food = food;//食物
             oCookShowItem.img = img;//图片, 
-            oCookShowItem.images = images;//图片, 
+            oCookShowItem.images = string.Format("http://tnfs.tngou.net/image{0}", images);//图片, 
             oCookShowItem.description = description;//描述
             oCookShowItem.keywords = keywords;//关键字
             //oCookShowItem.message = message;//资讯内容
