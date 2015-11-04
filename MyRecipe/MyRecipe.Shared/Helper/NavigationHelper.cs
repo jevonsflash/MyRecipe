@@ -6,7 +6,7 @@ using Windows.UI.Xaml.Controls;
 
 namespace MyRecipe.Helper
 {
-    public class NavigationHelpr
+    public class NavigationHelper
     {
         public static object Parameter; //导航传递参数
         private static Frame frame;//当前框架

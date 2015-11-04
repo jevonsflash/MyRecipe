@@ -35,7 +35,7 @@ namespace MyRecipe
         private void ListView_ItemClick(object sender, ItemClickEventArgs e)
         {
             int id = (e.ClickedItem as CookShowItem).id;
-            Helper.NavigationHelpr.NavigateTo(typeof(DetailPage), id);
+            Helper.NavigationHelper.NavigateTo(typeof(DetailPage), id);
 
         }
     }
