@@ -105,14 +105,16 @@ namespace MyRecipe.ViewModel
 
         private void Ht_FileWatchEvent2(object sender, CompleteEventArgs e)
         {
-            SectionSearch = cookser.CookShowDeserializer(e.Node);
+            SectionSearch = cookser.CookListDeserializer(e.Node);
         }
 
         private void NotifyPropertyChanged(string propertyName)
         {
             if (PropertyChanged != null)
             {
+
                 PropertyChanged(this, new PropertyChangedEventArgs(propertyName));
+
             }
         }
 

@@ -35,6 +35,21 @@ namespace MyRecipe.Server
             }
             return cookShowItemModelList;
         }
+
+        public List<Model.CookShowItem> CookListDeserializer(string jsonStr)
+        {
+            int total = 0;
+            List<Model.CookShowItem> cookShowItemModelList = new List<Model.CookShowItem>();
+
+            Dictionary<string, string> result = new Dictionary<string, string>();
+            JArray ja = (JArray)JsonConvert.DeserializeObject(jsonStr);
+            foreach (var item in ja)
+            {
+                cookShowItemModelList.Add(JTokenToModel(item));
+            }
+            return cookShowItemModelList;
+        }
+
         public Model.CookShowItem CookObjectDeserializer(string jsonStr)
         {
             JToken ja = (JToken)JsonConvert.DeserializeObject(jsonStr);

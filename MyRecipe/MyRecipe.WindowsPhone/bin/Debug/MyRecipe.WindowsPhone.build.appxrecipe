@@ -57,6 +57,9 @@
       <PackagePath>Assets\WideLogo.scale-240.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
     </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\Project\C#\test\MyRecipe\MyRecipe\MyRecipe.WindowsPhone\Ico\search.png">
+      <PackagePath>Ico\search.png</PackagePath>
+    </AppxPackagedFile>
     <AppxPackagedFile Include="D:\Project\C#\test\MyRecipe\MyRecipe\MyRecipe.Shared\Img\Header.png">
       <PackagePath>Img\Header.png</PackagePath>
     </AppxPackagedFile>
@@ -69,14 +72,14 @@
     <AppxPackagedFile Include="D:\Project\C#\test\MyRecipe\MyRecipe\MyRecipe.WindowsPhone\bin\Debug\App.xbf">
       <PackagePath>App.xbf</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="D:\Project\C#\test\MyRecipe\MyRecipe\MyRecipe.WindowsPhone\bin\Debug\MyUserControl\ItemControl.xbf">
-      <PackagePath>MyUserControl\ItemControl.xbf</PackagePath>
-    </AppxPackagedFile>
     <AppxPackagedFile Include="D:\Project\C#\test\MyRecipe\MyRecipe\MyRecipe.WindowsPhone\bin\Debug\DetailPage.xbf">
       <PackagePath>DetailPage.xbf</PackagePath>
     </AppxPackagedFile>
     <AppxPackagedFile Include="D:\Project\C#\test\MyRecipe\MyRecipe\MyRecipe.WindowsPhone\bin\Debug\MainPage.xbf">
       <PackagePath>MainPage.xbf</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\Project\C#\test\MyRecipe\MyRecipe\MyRecipe.WindowsPhone\bin\Debug\MyUserControl\ItemControl.xbf">
+      <PackagePath>MyUserControl\ItemControl.xbf</PackagePath>
     </AppxPackagedFile>
     <AppxPackagedFile Include="D:\Project\C#\test\MyRecipe\MyRecipe\MyRecipe.WindowsPhone\bin\Debug\resources.pri">
       <PackagePath>resources.pri</PackagePath>

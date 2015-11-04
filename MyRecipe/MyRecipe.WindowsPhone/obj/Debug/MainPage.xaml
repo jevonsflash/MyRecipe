@@ -12,6 +12,29 @@
         <ResourceDictionary>
             <ResourceDictionary.ThemeDictionaries>
                 <ResourceDictionary x:Key="Default">
+                    <ControlTemplate x:Key="ButtonControlTemplate2" TargetType="Button">
+                        <Border x:Name="ButtonBackground" CornerRadius="10"  Width="48" Height="48" >
+                            <Border.Background>
+                                <ImageBrush Stretch="Fill" ImageSource="/ico/search.png"/>
+                            </Border.Background>
+                            <VisualStateManager.VisualStateGroups>
+                                <VisualStateGroup x:Name="CommonStates">
+                                    <VisualStateGroup.Transitions>
+                                        <VisualTransition GeneratedDuration="0:0:1" To="Pressed">
+                                            <VisualTransition.GeneratedEasingFunction>
+                                                <CircleEase EasingMode="EaseOut"/>
+                                            </VisualTransition.GeneratedEasingFunction>
+                                        </VisualTransition>
+                                    </VisualStateGroup.Transitions>
+                                    <VisualState x:Name="Normal"/>
+                                    <VisualState x:Name="MouseOver"/>
+                                    <VisualState x:Name="Pressed"/>
+                                    <VisualState x:Name="Disabled"/>
+                                </VisualStateGroup>
+                            </VisualStateManager.VisualStateGroups>
+
+                        </Border>
+                    </ControlTemplate>
                     <ImageBrush x:Key="BackgroundImageBrush" ImageSource="Assets/bg1.jpg"/>
                 </ResourceDictionary>
                 <ResourceDictionary x:Key="HighContrast">
@@ -51,10 +74,10 @@
                     </ListView.ItemTemplate>
                 </ListView>
             </PivotItem>
-            <PivotItem Margin="10">
-                <ListView x:ConnectionId='1'
+            <PivotItem Header="推荐菜谱" Margin="10">
+                <ListView x:ConnectionId='3'
                         ItemsSource="{Binding SectionPopular, Mode=OneWay}"
-                                                                    
+                        
                                                   
                    
                     SelectionMode="Single"
@@ -80,16 +103,37 @@
                     </ListView.ItemTemplate>
                 </ListView>
             </PivotItem>
-            <PivotItem>
-                <ListView
-                        ItemsSource="{Binding SectionLatest, Mode=OneWay}"
+            <PivotItem Header="查询">
+                <Grid>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="Auto"></RowDefinition>
+                        <RowDefinition></RowDefinition>
+                    </Grid.RowDefinitions>
+                    <Grid Grid.Row="0">
+                        <Border x:Name="BD_TBFrame" VerticalAlignment="Top" BorderThickness="1" Height="72" BorderBrush="{StaticResource PhoneForegroundBrush}" CornerRadius="36">
+                            <StackPanel Orientation="Horizontal">
+                                <TextBox x:ConnectionId='2' x:Name="TBMainSearch" Text="{Binding Keywords,Mode=TwoWay}"
+                                     HorizontalAlignment="Left"
+						             Width="249"  Margin="5,0" Background="Transparent" BorderThickness="0"
+						                                            
+						             Foreground="{StaticResource PhoneForegroundBrush}"                              VerticalAlignment="Center"/>
+                                <Button x:Name="BTNSearch" Command="{Binding GoSearchCommand}" Content="Button"  HorizontalAlignment="Right"  VerticalAlignment="Center" BorderBrush="{x:Null}" Template="{StaticResource ButtonControlTemplate2}"/>
+                            </StackPanel>
+                        </Border>
+                    </Grid>
+                    <ListView x:ConnectionId='1' Grid.Row="1"
+                        ItemsSource="{Binding SectionSearch, Mode=OneWay}"
                         IsItemClickEnabled="True"
+                                                        
                         >
-                    <ListView.ItemTemplate>
-                        <DataTemplate>
-                        </DataTemplate>
-                    </ListView.ItemTemplate>
-                </ListView>
+                        <ListView.ItemTemplate>
+                            <DataTemplate>
+                                <TextBlock Text="{Binding name,Mode=OneWay}"></TextBlock>
+                            </DataTemplate>
+                            
+                        </ListView.ItemTemplate>
+                    </ListView>
+                </Grid>
             </PivotItem>
         </Pivot>
     </Grid>

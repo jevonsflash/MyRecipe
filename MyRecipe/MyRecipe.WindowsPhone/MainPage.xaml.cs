@@ -7,6 +7,7 @@ using System.Linq;
 using System.Runtime.InteropServices.WindowsRuntime;
 using Windows.Foundation;
 using Windows.Foundation.Collections;
+using Windows.UI;
 using Windows.UI.Xaml;
 using Windows.UI.Xaml.Controls;
 using Windows.UI.Xaml.Controls.Primitives;
@@ -36,6 +37,24 @@ namespace MyRecipe
         {
             int id = (e.ClickedItem as CookShowItem).id;
             Helper.NavigationHelper.NavigateTo(typeof(DetailPage), id);
+
+        }
+
+        private void TBMainSearch_Loaded(object sender, RoutedEventArgs e)
+        {
+            InitTextBlockStyle(sender, false);
+
+        }
+
+        private static void InitTextBlockStyle(object sender, bool isFoc)
+        {
+            Color whiteColor = Colors.White;
+            SolidColorBrush whiteBrush = new SolidColorBrush(whiteColor);
+            Color transparentColor = Colors.Transparent;
+            SolidColorBrush transparentBrush = new SolidColorBrush(transparentColor);
+            //SolidColorBrush PhoneBackgroundBrush = Application.Current.Resources["PhoneBackgroundBrush"] as SolidColorBrush;
+            (sender as Control).Background = transparentBrush;
+            (sender as Control).Foreground = whiteBrush;
 
         }
     }

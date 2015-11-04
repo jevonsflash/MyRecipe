@@ -38,14 +38,14 @@
                        VerticalAlignment="Center">
             </TextBlock>
         </Grid>
-        <GridView SelectedItem="{Binding SelectedCategory, Mode=TwoWay}" Grid.Row="1" Name="GVCon" Background="LightGoldenrodYellow"
+        <GridView x:ConnectionId='2' SelectedItem="{Binding SelectedCategory, Mode=TwoWay}" Grid.Row="1" Name="GVCon" Background="LightGoldenrodYellow"
             ItemsSource="{Binding BaseMaps,Mode=OneWay}"
             AutomationProperties.AutomationId="ItemGridView"
             AutomationProperties.Name="Items In Group"
             ItemTemplate="{StaticResource Standard200x180TileItemTemplate}"
             SelectionMode="None"
             IsItemClickEnabled="True"
-                  
+                                       
             >
 
         </GridView>
