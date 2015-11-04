@@ -1,6 +1,6 @@
 <XamlCompilerSaveState>
   <ReferenceAssemblyList>
     <LocalAssembly PathName="d:\project\c#\test\myrecipe\myrecipe\myrecipe.windows\obj\debug\intermediatexaml\myrecipe.windows.exe" HashGuid="17239e57-400c-b67e-c077-74c6322b9230" />
-    <ReferenceAssembly PathName="d:\project\c#\test\myrecipe\packages\newtonsoft.json.7.0.1\lib\portable-net45+wp80+win8+wpa81+dnxcore50\newtonsoft.json.dll" HashGuid="86223907-5808-be51-71b4-c872f8140e29" />
+    <ReferenceAssembly PathName="d:\project\myrecipe\packages\newtonsoft.json.7.0.1\lib\portable-net45+wp80+win8+wpa81+dnxcore50\newtonsoft.json.dll" HashGuid="86223907-5808-be51-71b4-c872f8140e29" />
   </ReferenceAssemblyList>
 </XamlCompilerSaveState>

@@ -1,4 +1,5 @@
-﻿using System;
+﻿using MyRecipe.Model;
+using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
@@ -49,6 +50,12 @@ namespace MyRecipe.MyUserControl
             {
                 this.GVCon.MaxHeight = double.MaxValue;
             }
+        }
+
+        private void GVCon_ItemClick(object sender, ItemClickEventArgs e)
+        {
+            int id = (e.ClickedItem as BaseMap).id;
+            Helper.NavigationHelpr.NavigateTo(typeof(DetailPage), id);
         }
     }
 }

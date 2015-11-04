@@ -51,7 +51,7 @@
                     </ListView.ItemTemplate>
                 </ListView>
             </PivotItem>
-            <PivotItem Margin="10">
+            <PivotItem Header="推荐菜谱" Margin="10">
                 <ListView
                         ItemsSource="{Binding SectionPopular, Mode=OneWay}"
                         SelectionChanged="ListView_SelectionChanged"
@@ -80,16 +80,26 @@
                     </ListView.ItemTemplate>
                 </ListView>
             </PivotItem>
-            <PivotItem>
-                <ListView
-                        ItemsSource="{Binding SectionLatest, Mode=OneWay}"
+            <PivotItem Header="查询">
+                <Grid>
+                    <Grid.RowDefinitions>
+                        <RowDefinition></RowDefinition>
+                        <RowDefinition></RowDefinition>
+                    </Grid.RowDefinitions>
+                    
+                    <TextBox Text="{Binding Keywords,Mode=TwoWay}"></TextBox>
+                    <Button Command="{Binding GoSearchCommand}"></Button>
+                    <ListView Grid.Row="1"
+                        ItemsSource="{Binding SectionSearch, Mode=OneWay}"
                         IsItemClickEnabled="True"
+                          ItemClick="ListView_ItemClick"
                         >
-                    <ListView.ItemTemplate>
-                        <DataTemplate>
-                        </DataTemplate>
-                    </ListView.ItemTemplate>
-                </ListView>
+                        <ListView.ItemTemplate>
+                            <DataTemplate>
+                            </DataTemplate>
+                        </ListView.ItemTemplate>
+                    </ListView>
+                </Grid>
             </PivotItem>
         </Pivot>
     </Grid>

@@ -45,7 +45,7 @@
             ItemTemplate="{StaticResource Standard200x180TileItemTemplate}"
             SelectionMode="None"
             IsItemClickEnabled="True"
-                  
+            ItemClick="GVCon_ItemClick"
             >
 
         </GridView>

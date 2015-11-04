@@ -1,1 +1,0 @@
-D:\Project\C#\test\MyRecipe\MyRecipe\MyRecipe.WindowsPhone\MyRecipe.WindowsPhone.csproj;neutral

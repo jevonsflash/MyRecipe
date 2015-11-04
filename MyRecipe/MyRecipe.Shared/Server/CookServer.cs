@@ -18,11 +18,16 @@ namespace MyRecipe.Server
 
             Dictionary<string, string> result = new Dictionary<string, string>();
             JObject jobject = JObject.Parse(jsonStr);
+            string jsonArrayText1;
             if (jobject.Property("total") != null)
             {
                 total = int.Parse(jobject["total"].ToString());
+                jsonArrayText1 = jobject["tngou"].ToString();
             }
-            string jsonArrayText1 = jobject["tngou"].ToString();
+            else
+            {
+                jsonArrayText1 = jsonStr;
+            }
             JArray ja = (JArray)JsonConvert.DeserializeObject(jsonArrayText1);
             foreach (var item in ja)
             {

@@ -9,6 +9,6 @@
     Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
 
     <Grid>
-        <TextBlock x:Name="ttt" FontSize="26.667" ></TextBlock>
+        <TextBlock x:Name="ttt" Text="{Binding Id,Mode=TwoWay}" FontSize="26.667" ></TextBlock>
     </Grid>
 </Page>

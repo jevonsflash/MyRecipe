@@ -15,6 +15,7 @@
     <Compile Include="$(MSBuildThisFileDirectory)App.xaml.cs">
       <DependentUpon>App.xaml</DependentUpon>
     </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)Command\DelegateCommand.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Helper\HttpHelper.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Helper\NavigationHelper.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Helper\StaticURLHelper.cs" />
@@ -24,18 +25,10 @@
     <Compile Include="$(MSBuildThisFileDirectory)Model\ItemControlTemplate.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Model\KeyWordsMap.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Model\UrlResult.cs" />
-    <Compile Include="$(MSBuildThisFileDirectory)MyUserControl\ItemControl.xaml.cs">
-      <DependentUpon>ItemControl.xaml</DependentUpon>
-    </Compile>
     <Compile Include="$(MSBuildThisFileDirectory)Server\CookServer.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Server\MapServer.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)ViewModel\DetailPageViewModel.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)ViewModel\MainPageViewModel.cs" />
-  </ItemGroup>
-  <ItemGroup>
-    <Page Include="$(MSBuildThisFileDirectory)MyUserControl\ItemControl.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
   </ItemGroup>
   <ItemGroup>
     <Content Include="$(MSBuildThisFileDirectory)Cook.xml" />
