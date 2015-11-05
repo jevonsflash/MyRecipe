@@ -9,6 +9,61 @@
     Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
 
     <Grid>
+
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"></RowDefinition>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+
+        </Grid.RowDefinitions>
+        <TextBlock Grid.Row="0" FontSize="48">白灼虾的做法</TextBlock>
         <TextBlock x:Name="ttt" Text="{Binding Id,Mode=TwoWay}" FontSize="26.667" ></TextBlock>
+        <ListView Grid.Row="1">
+            <ListViewItem>
+                <Grid>
+                    <Grid.RowDefinitions>
+                        <RowDefinition></RowDefinition>
+                        <RowDefinition></RowDefinition>
+                        <RowDefinition></RowDefinition>
+
+                    </Grid.RowDefinitions>
+                    <TextBlock Grid.Row="0" FontSize="29.333">菜谱简介</TextBlock>
+                    <TextBlock Grid.Row="1" FontSize="21.333" TextWrapping="Wrap">葫芦有清热利尿、除烦止渴，润肺止咳、消肿散结的功效。</TextBlock>
+                </Grid>
+
+            </ListViewItem>
+
+            <ListViewItem>
+                <Grid>
+                    <Grid.RowDefinitions>
+                        <RowDefinition></RowDefinition>
+                        <RowDefinition></RowDefinition>
+                        <RowDefinition></RowDefinition>
+
+                    </Grid.RowDefinitions>
+                    <TextBlock Grid.Row="0" FontSize="29.333">材料</TextBlock>
+                    <TextBlock Grid.Row="1" FontSize="21.333" TextWrapping="Wrap">葫芦1个，青红椒各1个，油、盐、鸡精适量。</TextBlock>
+                </Grid>
+
+            </ListViewItem>
+            <ListViewItem>
+                <Grid>
+                    <Grid.RowDefinitions>
+                        <RowDefinition></RowDefinition>
+                        <RowDefinition></RowDefinition>
+                        <RowDefinition></RowDefinition>
+
+                    </Grid.RowDefinitions>
+                    <TextBlock Grid.Row="0" FontSize="29.333">菜谱简介</TextBlock>
+                    <TextBlock Grid.Row="1" FontSize="21.333" TextWrapping="Wrap">1、青红椒洗净切丝，葫芦洗净后去皮切丝。
+
+2、起锅热油煸炒葫芦片刻，放青红椒翻炒约30秒。
+
+3、放盐、鸡精调味即可。</TextBlock>
+                </Grid>
+
+            </ListViewItem>
+        </ListView>
+
     </Grid>
 </Page>

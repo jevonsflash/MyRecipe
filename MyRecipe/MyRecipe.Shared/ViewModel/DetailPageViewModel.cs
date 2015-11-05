@@ -1,4 +1,5 @@
-﻿using MyRecipe.Helper;
+﻿using GalaSoft.MvvmLight;
+using MyRecipe.Helper;
 using MyRecipe.Model;
 using MyRecipe.Server;
 using System;
@@ -8,11 +9,10 @@ using System.Text;
 
 namespace MyRecipe.ViewModel
 {
-    public class DetailPageViewModel : INotifyPropertyChanged
+    public class DetailPageViewModel : ViewModelBase, INotifyPropertyChanged
     {
 
         private CookServer cookser = new CookServer();
-        public event PropertyChangedEventHandler PropertyChanged;
 
 
         private int id;
@@ -32,7 +32,7 @@ namespace MyRecipe.ViewModel
             set
             {
                 cookItem = value;
-                NotifyPropertyChanged("CookItem");
+                RaisePropertyChanged("CookItem");
             }
         }
 
@@ -56,12 +56,5 @@ namespace MyRecipe.ViewModel
             CookItem = cookser.CookObjectDeserializer(e.Node);
         }
 
-        private void NotifyPropertyChanged(string propertyName)
-        {
-            if (PropertyChanged != null)
-            {
-                PropertyChanged(this, new PropertyChangedEventArgs(propertyName));
-            }
-        }
     }
 }

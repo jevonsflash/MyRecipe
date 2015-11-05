@@ -29,6 +29,7 @@
     <Compile Include="$(MSBuildThisFileDirectory)Server\MapServer.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)ViewModel\DetailPageViewModel.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)ViewModel\MainPageViewModel.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)ViewModel\ViewModelLocator.cs" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="$(MSBuildThisFileDirectory)Cook.xml" />

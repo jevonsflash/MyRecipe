@@ -1,4 +1,5 @@
-﻿using System;
+﻿using MyRecipe.ViewModel;
+using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
@@ -27,6 +28,7 @@ namespace MyRecipe
         public DetailPage()
         {
             this.InitializeComponent();
+            this.DataContext = new DetailPageViewModel();
         }
 
         /// <summary>

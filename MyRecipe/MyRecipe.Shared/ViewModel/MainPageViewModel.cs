@@ -10,12 +10,13 @@ using System.Threading.Tasks;
 using System.Windows.Input;
 using Windows.UI.Xaml;
 using Windows.UI.Xaml.Controls;
+using GalaSoft.MvvmLight;
+using GalaSoft.MvvmLight.Threading;
 
 namespace MyRecipe.ViewModel
 {
-    public class MainPageViewModel : INotifyPropertyChanged
+    public class MainPageViewModel : ViewModelBase, INotifyPropertyChanged
     {
-        public event PropertyChangedEventHandler PropertyChanged;
         public event EventHandler CanExecuteChanged;
         public DelegateCommand GoSearchCommand { get; set; }
 
@@ -31,7 +32,7 @@ namespace MyRecipe.ViewModel
             set
             {
                 keywords = value;
-                NotifyPropertyChanged("Keywords");
+                RaisePropertyChanged("Keywords");
 
             }
         }
@@ -45,7 +46,7 @@ namespace MyRecipe.ViewModel
             set
             {
                 sectionCategory = value;
-                NotifyPropertyChanged("SectionCategory");
+                RaisePropertyChanged("SectionCategory");
             }
         }
         private List<CookShowItem> sectionPopular;
@@ -56,7 +57,7 @@ namespace MyRecipe.ViewModel
             set
             {
                 sectionPopular = value;
-                NotifyPropertyChanged("SectionPopular");
+                RaisePropertyChanged("SectionPopular");
             }
         }
         private List<CookShowItem> sectionSearch;
@@ -68,20 +69,20 @@ namespace MyRecipe.ViewModel
             set
             {
                 sectionSearch = value;
-                NotifyPropertyChanged("SectionSearch");
+                RaisePropertyChanged("SectionSearch");
             }
         }
 
 
         public MainPageViewModel()
         {
+            DispatcherHelper.Initialize();
             Dictionary<string, string> dic = new Dictionary<string, string>();
             GetJSON(StaticURLHelper.CookList, dic, Ht_FileWatchEvent);
             GetSectionCategory();
+            GoSearch(null);
             GoSearchCommand = new DelegateCommand();
             GoSearchCommand.ExecuteAction = new Action<object>(GoSearch);
-
-
 
         }
 
@@ -100,22 +101,12 @@ namespace MyRecipe.ViewModel
 
         private void Ht_FileWatchEvent(object sender, CompleteEventArgs e)
         {
-            SectionPopular = cookser.CookShowDeserializer(e.Node);
+            DispatcherHelper.CheckBeginInvokeOnUI(() => { SectionPopular = cookser.CookShowDeserializer(e.Node); });
         }
 
         private void Ht_FileWatchEvent2(object sender, CompleteEventArgs e)
         {
-            SectionSearch = cookser.CookListDeserializer(e.Node);
-        }
-
-        private void NotifyPropertyChanged(string propertyName)
-        {
-            if (PropertyChanged != null)
-            {
-
-                PropertyChanged(this, new PropertyChangedEventArgs(propertyName));
-
-            }
+            DispatcherHelper.CheckBeginInvokeOnUI(() => { SectionSearch = cookser.CookListDeserializer(e.Node); });
         }
 
 
