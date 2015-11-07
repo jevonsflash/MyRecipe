@@ -11,7 +11,9 @@ Assets\StoreLogo.scale-240.png
 Assets\WideLogo.scale-240.png
 App.xbf
 DetailPage.xbf
+Dictionary\MainDictionary.xbf
 MainPage.xbf
 MyRecipe.WindowsPhone.xr.xml
+MyUserControl\FoodItemControl.xbf
 MyUserControl\ItemControl.xbf
 Ico\search.png

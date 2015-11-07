@@ -1,4 +1,4 @@
-﻿<Page
+﻿<Page xmlns:MyUserControl="using:MyRecipe.MyUserControl" 
     x:Class="MyRecipe.DetailPage"
     xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
@@ -9,61 +9,39 @@
     Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
 
     <Grid>
-
         <Grid.RowDefinitions>
             <RowDefinition Height="Auto"></RowDefinition>
-            <RowDefinition></RowDefinition>
-            <RowDefinition></RowDefinition>
+            <RowDefinition Height="0.9*"></RowDefinition>
+            <RowDefinition Height="0.1*"></RowDefinition>
 
         </Grid.RowDefinitions>
-        <TextBlock Grid.Row="0" FontSize="48">白灼虾的做法</TextBlock>
+        <Grid Grid.Row="0" Margin="0,10" Background="White">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="Auto"/>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+
+            <Border Background="{ThemeResource ListViewItemPlaceholderBackgroundThemeBrush}" Margin="9.5,9.5" Grid.Column="0" HorizontalAlignment="Left">
+                <Image Source="{Binding CookItem.images,Mode=OneWay}" Stretch="UniformToFill" Height="179" Width="125"/>
+            </Border>
+            <StackPanel Grid.Column="1" Margin="10.5,0,0,0">
+                <TextBlock Text="{Binding CookItem.name}" TextWrapping="Wrap" Style="{ThemeResource ListViewItemTextBlockStyle}" Foreground="SaddleBrown"/>
+                <TextBlock Height="40" Text="需要准备" Style="{ThemeResource ListViewItemContentTextBlockStyle}"  Foreground="Tan"/>
+                <MyUserControl:FoodItemControl DataContext="{Binding Food,Mode=OneWay}"/>
+            </StackPanel>
+        </Grid>
+        <Grid Grid.Row="1" Background="White">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto"></RowDefinition>
+                <RowDefinition Height="*"></RowDefinition>
+
+            </Grid.RowDefinitions>
+            <TextBlock Grid.Row="0" Text="做法" TextWrapping="Wrap" Style="{ThemeResource ListViewItemTextBlockStyle}" Foreground="SaddleBrown"/>
+            <WebView x:Name="WV" Grid.Row="1" DataContext="{Binding CookItem.message}" LoadCompleted="WV_LoadCompleted"/>
+
+        </Grid>
+
         <TextBlock x:Name="ttt" Text="{Binding Id,Mode=TwoWay}" FontSize="26.667" ></TextBlock>
-        <ListView Grid.Row="1">
-            <ListViewItem>
-                <Grid>
-                    <Grid.RowDefinitions>
-                        <RowDefinition></RowDefinition>
-                        <RowDefinition></RowDefinition>
-                        <RowDefinition></RowDefinition>
-
-                    </Grid.RowDefinitions>
-                    <TextBlock Grid.Row="0" FontSize="29.333">菜谱简介</TextBlock>
-                    <TextBlock Grid.Row="1" FontSize="21.333" TextWrapping="Wrap">葫芦有清热利尿、除烦止渴，润肺止咳、消肿散结的功效。</TextBlock>
-                </Grid>
-
-            </ListViewItem>
-
-            <ListViewItem>
-                <Grid>
-                    <Grid.RowDefinitions>
-                        <RowDefinition></RowDefinition>
-                        <RowDefinition></RowDefinition>
-                        <RowDefinition></RowDefinition>
-
-                    </Grid.RowDefinitions>
-                    <TextBlock Grid.Row="0" FontSize="29.333">材料</TextBlock>
-                    <TextBlock Grid.Row="1" FontSize="21.333" TextWrapping="Wrap">葫芦1个，青红椒各1个，油、盐、鸡精适量。</TextBlock>
-                </Grid>
-
-            </ListViewItem>
-            <ListViewItem>
-                <Grid>
-                    <Grid.RowDefinitions>
-                        <RowDefinition></RowDefinition>
-                        <RowDefinition></RowDefinition>
-                        <RowDefinition></RowDefinition>
-
-                    </Grid.RowDefinitions>
-                    <TextBlock Grid.Row="0" FontSize="29.333">菜谱简介</TextBlock>
-                    <TextBlock Grid.Row="1" FontSize="21.333" TextWrapping="Wrap">1、青红椒洗净切丝，葫芦洗净后去皮切丝。
-
-2、起锅热油煸炒葫芦片刻，放青红椒翻炒约30秒。
-
-3、放盐、鸡精调味即可。</TextBlock>
-                </Grid>
-
-            </ListViewItem>
-        </ListView>
 
     </Grid>
 </Page>

@@ -42,6 +42,7 @@
     <build:Item Name="Microsoft.Build.AppxPackage.dll" Version="14.0.23121.0" />
     <build:Item Name="ProjectGUID" Value="{D2871FF9-5598-45D6-B6F2-9AE134B23B02}" />
     <build:Item Name="Microsoft.Windows.UI.Xaml.81.Build.Tasks.dll" Version="14.0.22705.1" />
+    <build:Item Name="BehaviorsXamlSDKManaged" Version="12.0" />
     <build:Item Name="MakePri.exe" Version="6.3.9600.17336 (winblue.150226-1500)" />
   </build:Metadata>
 </Package>

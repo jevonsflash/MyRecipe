@@ -41,6 +41,11 @@ namespace MyRecipe
             t = e.Parameter.ToString();
             this.ttt.Text = t;
         }
-        
+
+        private void WV_LoadCompleted(object sender, NavigationEventArgs e)
+        {
+            this.WV.NavigateToString(WV.DataContext as string);
+
+        }
     }
 }

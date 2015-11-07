@@ -15,11 +15,11 @@ using GalaSoft.MvvmLight.Threading;
 
 namespace MyRecipe.ViewModel
 {
-    public class MainPageViewModel : ViewModelBase, INotifyPropertyChanged
+    public class MainPageViewModel : ViewModelBase
     {
         public event EventHandler CanExecuteChanged;
         public DelegateCommand GoSearchCommand { get; set; }
-
+        public DelegateCommand GoNavigationCommand { get; set; }
 
         private MapServer mapser = new MapServer();
         private CookServer cookser = new CookServer();
@@ -83,7 +83,8 @@ namespace MyRecipe.ViewModel
             GoSearch(null);
             GoSearchCommand = new DelegateCommand();
             GoSearchCommand.ExecuteAction = new Action<object>(GoSearch);
-
+            GoNavigationCommand = new DelegateCommand();
+            GoNavigationCommand.ExecuteAction = new Action<object>(GoNavigation);
         }
 
         public async Task GetSectionCategory()
@@ -116,6 +117,14 @@ namespace MyRecipe.ViewModel
             Dictionary<string, string> dic = new Dictionary<string, string>();
             dic.Add("name", kw);
             GetJSON(StaticURLHelper.CookByName, dic, Ht_FileWatchEvent2);
+
+        }
+
+        private void GoNavigation(object parameter)
+        {
+            int id = (parameter as CookShowItem).id;
+            Type  t= typeof(DetailPage);
+            Helper.NavigationHelper.NavigateTo(t, id);
 
         }
     }

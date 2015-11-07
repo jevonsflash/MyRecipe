@@ -61,3 +61,15 @@ D:\Project\C#\test\MyRecipe\MyRecipe\MyRecipe.WindowsPhone\obj\Debug\Microsoft.P
 D:\Project\C#\test\MyRecipe\MyRecipe\MyRecipe.WindowsPhone\obj\Debug\Microsoft.Practices.ServiceLocation.pri
 D:\Project\C#\test\MyRecipe\MyRecipe\MyRecipe.WindowsPhone\obj\Debug\Microsoft.Practices.ServiceLocation\qualifiers.txt
 D:\Project\C#\test\MyRecipe\MyRecipe\MyRecipe.WindowsPhone\obj\Debug\GalaSoft.MvvmLight.Platform.pri.xml
+D:\Project\C#\test\MyRecipe\MyRecipe\MyRecipe.WindowsPhone\obj\Debug\Dictionary\MainDictionary.g.i.cs
+D:\Project\C#\test\MyRecipe\MyRecipe\MyRecipe.WindowsPhone\obj\Debug\Dictionary\MainDictionary.g.cs
+D:\Project\C#\test\MyRecipe\MyRecipe\MyRecipe.WindowsPhone\obj\Debug\MyUserControl\FoodItemControl.g.i.cs
+D:\Project\C#\test\MyRecipe\MyRecipe\MyRecipe.WindowsPhone\obj\Debug\MyUserControl\FoodItemControl.g.cs
+D:\Project\C#\test\MyRecipe\MyRecipe\MyRecipe.WindowsPhone\obj\Debug\Dictionary\MainDictionary.xaml
+D:\Project\C#\test\MyRecipe\MyRecipe\MyRecipe.WindowsPhone\obj\Debug\Dictionary\MainDictionary.xbf
+D:\Project\C#\test\MyRecipe\MyRecipe\MyRecipe.WindowsPhone\bin\Debug\Dictionary\MainDictionary.xbf
+D:\Project\C#\test\MyRecipe\MyRecipe\MyRecipe.WindowsPhone\bin\Debug\MyUserControl\FoodItemControl.xbf
+D:\Project\C#\test\MyRecipe\MyRecipe\MyRecipe.WindowsPhone\obj\Debug\MyUserControl\FoodItemControl.xaml
+D:\Project\C#\test\MyRecipe\MyRecipe\MyRecipe.WindowsPhone\obj\Debug\MyUserControl\FoodItemControl.xbf
+D:\Project\C#\test\MyRecipe\MyRecipe\MyRecipe.WindowsPhone\bin\Debug\Microsoft.Xaml.Interactions.dll
+D:\Project\C#\test\MyRecipe\MyRecipe\MyRecipe.WindowsPhone\bin\Debug\Microsoft.Xaml.Interactivity.dll
