@@ -1,4 +1,6 @@
-﻿using MyRecipe.ViewModel;
+﻿using GalaSoft.MvvmLight.Messaging;
+using MyRecipe.Helper;
+using MyRecipe.ViewModel;
 using System;
 using System.Collections.Generic;
 using System.IO;
@@ -39,6 +41,7 @@ namespace MyRecipe
         protected override void OnNavigatedTo(NavigationEventArgs e)
         {
             t = e.Parameter.ToString();
+            Messenger.Default.Send<string>(t, StaticMsgToken.Navigation);
             this.ttt.Text = t;
         }
 

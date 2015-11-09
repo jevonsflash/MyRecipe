@@ -1,4 +1,5 @@
 ﻿using GalaSoft.MvvmLight;
+using GalaSoft.MvvmLight.Messaging;
 using MyRecipe.Helper;
 using MyRecipe.Model;
 using MyRecipe.Server;
@@ -55,11 +56,15 @@ namespace MyRecipe.ViewModel
 
         public DetailPageViewModel()
         {
+            Messenger.Default.Register<string>(this, StaticMsgToken.Navigation, InitData);
+        } 
+
+        private void InitData(string id)
+        {
             string url = StaticURLHelper.CookShow;
             Dictionary<string, string> dic = new Dictionary<string, string>();
-            dic.Add("id", Id.ToString());
+            dic.Add("id", id);
             GetJSON(StaticURLHelper.CookShow, dic, Ht_FileWatchEvent);
-
         }
 
         private void GetJSON(string url, Dictionary<string, string> dic, HttpHelper.FileWatchEventHander de)
