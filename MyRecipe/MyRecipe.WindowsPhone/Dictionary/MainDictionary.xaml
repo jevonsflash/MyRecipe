@@ -27,7 +27,7 @@
 
                 </Border>
             </ControlTemplate>
-            <ImageBrush x:Key="BackgroundImageBrush" ImageSource="Assets/bg1.jpg"/>
+            <ImageBrush x:Key="BackgroundImageBrush" ImageSource="/Assets/bg1.jpg"/>
         </ResourceDictionary>
         <ResourceDictionary x:Key="HighContrast">
             <ImageBrush x:Key="HubBackgroundImageBrush" ImageSource="{x:Null}"/>

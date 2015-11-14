@@ -11,20 +11,21 @@
     <UserControl.Resources>
         <ResourceDictionary>
             <DataTemplate x:Key="Standard200x180TileItemTemplate">
-                <Grid Margin="0,0,9.5,9.5" Background="Transparent">
-                    <Rectangle Fill="Transparent" Height="75" Width="95"/>
-                    <TextBlock Text="{Binding Mode=OneWay}" VerticalAlignment="Bottom" Margin="9.5,0,0,16.5" Style="{ThemeResource BaseTextBlockStyle}" Foreground="SaddleBrown" />
+                <Grid Margin="9.5,0" Background="LightGoldenrodYellow">
+                    <TextBlock Text="{Binding Mode=OneWay}" 
+                               VerticalAlignment="Bottom"
+                               Margin="9.5,2.5" 
+                               Style="{ThemeResource BaseTextBlockStyle}"
+                               Foreground="SaddleBrown" />
                 </Grid>
             </DataTemplate>
 
         </ResourceDictionary>
     </UserControl.Resources>
-
     <Grid>
         <GridView 
-                  
                   Name="GVCon"
-                  Background="LightGoldenrodYellow"
+                  Background="Transparent"
                   ItemsSource="{Binding Mode=OneWay}"
                   AutomationProperties.AutomationId="ItemGridView"
                   AutomationProperties.Name="Items In Group"
@@ -32,7 +33,7 @@
                   SelectionMode="None"
                   IsItemClickEnabled="True"
                   ItemClick="GVCon_ItemClick">
-
         </GridView>
+        
     </Grid>
 </UserControl>

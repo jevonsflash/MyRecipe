@@ -48,7 +48,6 @@
             <PivotItem Header="推荐菜谱" Margin="10">
                 <ListView
 					ItemsSource="{Binding SectionPopular, Mode=OneWay}"
-					ItemClick="ListView_ItemClick"
 					ItemTemplate="{StaticResource CookItemTemplate}"
 					SelectionMode="Single"
 					IsItemClickEnabled="True">
@@ -80,9 +79,13 @@
                     <ListView Grid.Row="1"
 						ItemsSource="{Binding SectionSearch, Mode=OneWay}"
 						IsItemClickEnabled="True"
-						ItemTemplate="{StaticResource CookItemTemplate}"
-						ItemClick="ListView_ItemClick"
-                        />
+						ItemTemplate="{StaticResource CookItemTemplate}">
+                        <Interactivity:Interaction.Behaviors>
+                            <Core:EventTriggerBehavior EventName="ItemClick">
+                                <Core:InvokeCommandAction Command="{Binding GoNavigationCommand}" CommandParameter="{Binding Path=.ClickedItem,  RelativeSource={RelativeSource Mode=Self}}"/>
+                            </Core:EventTriggerBehavior>
+                        </Interactivity:Interaction.Behaviors>
+                    </ListView>
                 </Grid>
             </PivotItem>
         </Pivot>

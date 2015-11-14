@@ -1,5 +1,7 @@
 ﻿using GalaSoft.MvvmLight;
 using GalaSoft.MvvmLight.Messaging;
+using GalaSoft.MvvmLight.Threading;
+using MyRecipe.Command;
 using MyRecipe.Helper;
 using MyRecipe.Model;
 using MyRecipe.Server;
@@ -14,6 +16,7 @@ namespace MyRecipe.ViewModel
     {
 
         private CookServer cookser = new CookServer();
+        public DelegateCommand GoBackCommand { get; set; }
 
 
         private int id;
@@ -56,17 +59,35 @@ namespace MyRecipe.ViewModel
 
         public DetailPageViewModel()
         {
-            Messenger.Default.Register<string>(this, StaticMsgToken.Navigation, InitData);
-        } 
+            //注册消息
+            Messenger.Default.Register<string>(this, StaticMsgToken.NavigationA, InitData);
+            GoBackCommand = new DelegateCommand();
+            GoBackCommand.ExecuteAction = new Action<object>(GoBack);
 
+        }
+
+        private void GoBack(object obj)
+        {
+            NavigationHelper.GoBack();
+        }
+
+        /// <summary>
+        /// 初始化数据(收到消息触发)
+        /// </summary>
+        /// <param name="id"></param>
         private void InitData(string id)
         {
             string url = StaticURLHelper.CookShow;
             Dictionary<string, string> dic = new Dictionary<string, string>();
             dic.Add("id", id);
-            GetJSON(StaticURLHelper.CookShow, dic, Ht_FileWatchEvent);
+            GetJSON(url, dic, Ht_FileWatchEvent);
         }
-
+        /// <summary>
+        /// 请求Json数据
+        /// </summary>
+        /// <param name="url"></param>
+        /// <param name="dic"></param>
+        /// <param name="de"></param>
         private void GetJSON(string url, Dictionary<string, string> dic, HttpHelper.FileWatchEventHander de)
         {
             HttpHelper ht = new HttpHelper();
@@ -76,15 +97,18 @@ namespace MyRecipe.ViewModel
         }
         private void Ht_FileWatchEvent(object sender, CompleteEventArgs e)
         {
-            CookItem = cookser.CookObjectDeserializer(e.Node);
-
-            List<string> foodlist = new List<string>();
-            string[] foodarr = CookItem.food.Split(',');
-            foreach (var item in foodarr)
+            DispatcherHelper.CheckBeginInvokeOnUI(() =>
             {
-                foodlist.Add(item);
-            }
-            Food = foodlist;
+                CookItem = cookser.CookObjectDeserializer(e.Node);
+
+                List<string> foodlist = new List<string>();
+                string[] foodarr = CookItem.food.Split(',');
+                foreach (var item in foodarr)
+                {
+                    foodlist.Add(item);
+                }
+                Food = foodlist;
+            });
         }
 
     }

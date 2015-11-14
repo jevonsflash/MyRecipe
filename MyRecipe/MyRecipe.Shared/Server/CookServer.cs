@@ -71,7 +71,11 @@ namespace MyRecipe.Server
             string food = item["food"].ToString() ?? "";
             string description = item["description"].ToString() ?? "";
             string keywords = item["keywords"].ToString() ?? "";
-            //string message = item["message"].ToString() ?? "";
+            string message = string.Empty;
+            if (item["message"] != null)
+            {
+                message = item["message"].ToString() ?? "";
+            }
             //string disease = item["disease"].ToString() ?? "";
 
             oCookShowItem.id = id;
@@ -85,7 +89,7 @@ namespace MyRecipe.Server
             oCookShowItem.images = string.Format("http://tnfs.tngou.net/image{0}", images);//图片, 
             oCookShowItem.description = description;//描述
             oCookShowItem.keywords = keywords;//关键字
-            //oCookShowItem.message = message;//资讯内容
+            oCookShowItem.message = message;//资讯内容
 
             return oCookShowItem;
         }

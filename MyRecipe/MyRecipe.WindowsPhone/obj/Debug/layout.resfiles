@@ -1,10 +1,9 @@
 Cook.xml
 Img\Header.png
 Assets\bg1.jpg
-Assets\HubBackground.theme-dark.png
-Assets\HubBackground.theme-light.png
 Assets\Logo.scale-240.png
 Assets\SmallLogo.scale-240.png
+Assets\SplashScreen.jpg
 Assets\SplashScreen.scale-240.png
 Assets\Square71x71Logo.scale-240.png
 Assets\StoreLogo.scale-240.png
@@ -12,8 +11,12 @@ Assets\WideLogo.scale-240.png
 App.xbf
 DetailPage.xbf
 Dictionary\MainDictionary.xbf
+FoodDetailPage.xbf
 MainPage.xbf
 MyRecipe.WindowsPhone.xr.xml
 MyUserControl\FoodItemControl.xbf
+MyUserControl\FoodItemControl2.xbf
 MyUserControl\ItemControl.xbf
+MyUserControl\JMessboxControl.xbf
+SubMainPage.xbf
 Ico\search.png

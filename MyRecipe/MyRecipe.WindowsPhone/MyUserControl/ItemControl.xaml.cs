@@ -6,6 +6,7 @@ using System.Linq;
 using System.Runtime.InteropServices.WindowsRuntime;
 using Windows.Foundation;
 using Windows.Foundation.Collections;
+using Windows.UI;
 using Windows.UI.Xaml;
 using Windows.UI.Xaml.Controls;
 using Windows.UI.Xaml.Controls.Primitives;
@@ -31,6 +32,7 @@ namespace MyRecipe.MyUserControl
         private void ItemControl_Loaded(object sender, RoutedEventArgs e)
         {
             InitGrid();
+            this.GDTitle.Background = new SolidColorBrush(Helper.ColorGenerator.GetColorGroup1());
         }
 
         private void Grid_Tapped(object sender, TappedRoutedEventArgs e)
@@ -55,7 +57,7 @@ namespace MyRecipe.MyUserControl
         private void GVCon_ItemClick(object sender, ItemClickEventArgs e)
         {
             int id = (e.ClickedItem as BaseMap).id;
-            Helper.NavigationHelper.NavigateTo(typeof(DetailPage), id);
+            Helper.NavigationHelper.NavigateTo(typeof(SubMainPage), id);
         }
     }
 }

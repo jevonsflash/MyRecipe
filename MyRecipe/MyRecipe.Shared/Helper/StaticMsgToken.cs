@@ -6,7 +6,8 @@ namespace MyRecipe.Helper
 {
     public class StaticMsgToken
     {
-        public const string Navigation = "MSG_NAVIGATION";
+        public const string NavigationA = "MSG_NAVIGATIONA";
+        public const string NavigationB = "MSG_NAVIGATIONB";
 
     }
 }

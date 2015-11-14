@@ -16,19 +16,25 @@
       <DependentUpon>App.xaml</DependentUpon>
     </Compile>
     <Compile Include="$(MSBuildThisFileDirectory)Command\DelegateCommand.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Helper\ColorGenerator.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Helper\HttpHelper.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Helper\NavigationHelper.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Helper\StaticMsgToken.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Helper\StaticURLHelper.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Model\BaseMap.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Model\BodyMap.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Model\CookShowItem.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Model\FoodShowItem.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Model\ItemControlTemplate.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Model\KeyWordsMap.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Model\UrlResult.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Server\CookServer.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Server\FoodServer.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Server\MapServer.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)ViewModel\DetailPageViewModel.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)ViewModel\FoodDetailPageViewModel.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)ViewModel\MainPageViewModel.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)ViewModel\SubMainPageViewModel.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)ViewModel\ViewModelLocator.cs" />
   </ItemGroup>
   <ItemGroup>

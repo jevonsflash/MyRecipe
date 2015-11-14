@@ -17,6 +17,8 @@ namespace MyRecipe.Helper
         public static string CookList = "http://www.tngou.net/api/cook/list";
         public static string CookByName = "http://www.tngou.net/api/cook/name";
         public static string CookShow = "http://www.tngou.net/api/cook/show";
-        
+
+        public static string FoodByName = "http://www.tngou.net/api/food/name";
+
     }
 }

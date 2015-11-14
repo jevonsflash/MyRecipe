@@ -46,15 +46,14 @@
                 </ListView>
             </PivotItem>
             <PivotItem Header="推荐菜谱" Margin="10">
-                <ListView x:ConnectionId='3'
+                <ListView
 					ItemsSource="{Binding SectionPopular, Mode=OneWay}"
-					                              
 					ItemTemplate="{StaticResource CookItemTemplate}"
 					SelectionMode="Single"
 					IsItemClickEnabled="True">
                     <Interactivity:Interaction.Behaviors>
                         <Core:EventTriggerBehavior EventName="ItemClick">
-                            <Core:InvokeCommandAction Command="{Binding GoNavigationCommand}" CommandParameter="{Binding Path=.SelectedItem,  RelativeSource={RelativeSource Mode=Self}}"/>
+                            <Core:InvokeCommandAction Command="{Binding GoNavigationCommand}" CommandParameter="{Binding Path=.ClickedItem,  RelativeSource={RelativeSource Mode=Self}}"/>
                         </Core:EventTriggerBehavior>
                     </Interactivity:Interaction.Behaviors>
                 </ListView>
@@ -68,7 +67,7 @@
                     <Grid Grid.Row="0">
                         <Border x:Name="BD_TBFrame" VerticalAlignment="Top" BorderThickness="1" Height="72" BorderBrush="{StaticResource PhoneForegroundBrush}" CornerRadius="36">
                             <StackPanel Orientation="Horizontal">
-                                <TextBox x:ConnectionId='2' x:Name="TBMainSearch" Text="{Binding Keywords, Mode=TwoWay}"
+                                <TextBox x:ConnectionId='1' x:Name="TBMainSearch" Text="{Binding Keywords, Mode=TwoWay}"
 									HorizontalAlignment="Left"
 									Width="249"  Margin="5,0" Background="Transparent" BorderThickness="0"
 									                               
@@ -77,12 +76,16 @@
                             </StackPanel>
                         </Border>
                     </Grid>
-                    <ListView x:ConnectionId='1' Grid.Row="1"
+                    <ListView Grid.Row="1"
 						ItemsSource="{Binding SectionSearch, Mode=OneWay}"
 						IsItemClickEnabled="True"
-						ItemTemplate="{StaticResource CookItemTemplate}"
-						                              
-                        />
+						ItemTemplate="{StaticResource CookItemTemplate}">
+                        <Interactivity:Interaction.Behaviors>
+                            <Core:EventTriggerBehavior EventName="ItemClick">
+                                <Core:InvokeCommandAction Command="{Binding GoNavigationCommand}" CommandParameter="{Binding Path=.ClickedItem,  RelativeSource={RelativeSource Mode=Self}}"/>
+                            </Core:EventTriggerBehavior>
+                        </Interactivity:Interaction.Behaviors>
+                    </ListView>
                 </Grid>
             </PivotItem>
         </Pivot>

@@ -1,4 +1,5 @@
-﻿using MyRecipe.Model;
+﻿using MyRecipe.JMessbox;
+using MyRecipe.Model;
 using MyRecipe.ViewModel;
 using System;
 using System.Collections.Generic;
@@ -7,6 +8,7 @@ using System.Linq;
 using System.Runtime.InteropServices.WindowsRuntime;
 using Windows.Foundation;
 using Windows.Foundation.Collections;
+using Windows.Phone.UI.Input;
 using Windows.UI;
 using Windows.UI.Xaml;
 using Windows.UI.Xaml.Controls;
@@ -29,21 +31,13 @@ namespace MyRecipe
         {
             this.InitializeComponent();
             this.DataContext = new MainPageViewModel();
-
-
-        }
-
-        private void ListView_ItemClick(object sender, ItemClickEventArgs e)
-        {
-            //int id = (e.ClickedItem as CookShowItem).id;
-            //Helper.NavigationHelper.NavigateTo(typeof(DetailPage), id);
+            HardwareButtons.BackPressed += HardwareButtons_BackPressed;
 
         }
 
         private void TBMainSearch_Loaded(object sender, RoutedEventArgs e)
         {
             InitTextBlockStyle(sender, false);
-
         }
 
         private static void InitTextBlockStyle(object sender, bool isFoc)
@@ -55,6 +49,26 @@ namespace MyRecipe
             //SolidColorBrush PhoneBackgroundBrush = Application.Current.Resources["PhoneBackgroundBrush"] as SolidColorBrush;
             (sender as Control).Background = transparentBrush;
             (sender as Control).Foreground = whiteBrush;
+
+        }
+
+
+
+
+        private void HardwareButtons_BackPressed(object sender, BackPressedEventArgs e)
+        {
+            e.Handled = true;
+            JMessBox jb = new JMessBox("再按一次离开");
+            jb.Completed += (b) =>
+            {
+                if (b)
+                {
+                    //退出代码
+
+                    Application.Current.Exit();
+                }
+            };
+            jb.Show();
 
         }
     }

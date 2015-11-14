@@ -5,17 +5,20 @@
     xmlns:local="using:MyRecipe"
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-    mc:Ignorable="d"
+    xmlns:cv="using:MyRecipe.Converter"
+      mc:Ignorable="d"
     Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+    <Page.Resources>
+        <cv:Visibility2Bool  x:Key="VisibleConvert"/>
+        <cv:Double2Bool  x:Key="OpacityConvert"/>
 
-    <Grid>
+    </Page.Resources>
+    <Grid Background="White">
         <Grid.RowDefinitions>
             <RowDefinition Height="Auto"></RowDefinition>
             <RowDefinition Height="0.9*"></RowDefinition>
-            <RowDefinition Height="0.1*"></RowDefinition>
-
         </Grid.RowDefinitions>
-        <Grid Grid.Row="0" Margin="0,10" Background="White">
+        <Grid Grid.Row="0" Opacity="{Binding ElementName=BTNFood, Path=IsChecked, Converter={StaticResource ResourceKey=OpacityConvert}}" Background="White">
             <Grid.ColumnDefinitions>
                 <ColumnDefinition Width="Auto"/>
                 <ColumnDefinition Width="*"/>
@@ -24,25 +27,30 @@
             <Border Background="{ThemeResource ListViewItemPlaceholderBackgroundThemeBrush}" Margin="9.5,9.5" Grid.Column="0" HorizontalAlignment="Left">
                 <Image Source="{Binding CookItem.images,Mode=OneWay}" Stretch="UniformToFill" Height="179" Width="125"/>
             </Border>
-            <StackPanel Grid.Column="1" Margin="10.5,0,0,0">
-                <TextBlock Text="{Binding CookItem.name}" TextWrapping="Wrap" Style="{ThemeResource ListViewItemTextBlockStyle}" Foreground="SaddleBrown"/>
+            <StackPanel Grid.Column="1" Margin="10.5,10.5,0,0">
+                <TextBlock Text="{Binding CookItem.name,Mode=OneWay}" TextWrapping="Wrap" Style="{ThemeResource ListViewItemTextBlockStyle}" Foreground="SaddleBrown"/>
                 <TextBlock Height="40" Text="需要准备" Style="{ThemeResource ListViewItemContentTextBlockStyle}"  Foreground="Tan"/>
                 <MyUserControl:FoodItemControl DataContext="{Binding Food,Mode=OneWay}"/>
             </StackPanel>
         </Grid>
         <Grid Grid.Row="1" Background="White">
             <Grid.RowDefinitions>
-                <RowDefinition Height="Auto"></RowDefinition>
                 <RowDefinition Height="*"></RowDefinition>
-
+                <RowDefinition Height="Auto"></RowDefinition>
             </Grid.RowDefinitions>
-            <TextBlock Grid.Row="0" Text="做法" TextWrapping="Wrap" Style="{ThemeResource ListViewItemTextBlockStyle}" Foreground="SaddleBrown"/>
-            <WebView x:ConnectionId='1' x:Name="WV" Grid.Row="1" DataContext="{Binding CookItem.message}"                                 />
+            <WebView x:ConnectionId='1' Opacity="{Binding ElementName=BTNFood, Path=IsChecked, Converter={StaticResource ResourceKey=OpacityConvert}}" x:Name="WV" Grid.Row="0" DataContext="{Binding CookItem.message,Mode=OneWay}"                                           />
+            <StackPanel Grid.Row="1" Orientation="Horizontal" HorizontalAlignment="Center">
+                <Button x:ConnectionId='2' x:Name="BTNBack" BorderThickness="0"                       Foreground="Black" Command="{Binding GoBackCommand}" HorizontalAlignment="Center">返回</Button>
+                <ToggleButton x:ConnectionId='3' x:Name="BTNFood" BorderThickness="0"                       Foreground="Black" HorizontalAlignment="Center" Width="261">准备食材</ToggleButton>
 
+            </StackPanel>
+            <MyUserControl:FoodItemControl2 
+                DataContext="{Binding Food,Mode=OneWay}" 
+                Visibility="{Binding ElementName=BTNFood, Path=IsChecked, Converter={StaticResource ResourceKey=VisibleConvert}}"
+                Width="261" Height="210" Margin="0,0,15,10.167" 
+                VerticalAlignment="Bottom" HorizontalAlignment="Right">
+            </MyUserControl:FoodItemControl2>
         </Grid>
-
-        <TextBlock x:Name="ttt" Text="{Binding Id,Mode=TwoWay}" FontSize="26.667" ></TextBlock>
-
     </Grid>
 </Page>
 

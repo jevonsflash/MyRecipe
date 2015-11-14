@@ -33,7 +33,6 @@ namespace MyRecipe.ViewModel
             {
                 keywords = value;
                 RaisePropertyChanged("Keywords");
-
             }
         }
 
@@ -80,7 +79,6 @@ namespace MyRecipe.ViewModel
             Dictionary<string, string> dic = new Dictionary<string, string>();
             GetJSON(StaticURLHelper.CookList, dic, Ht_FileWatchEvent);
             GetSectionCategory();
-            GoSearch(null);
             GoSearchCommand = new DelegateCommand();
             GoSearchCommand.ExecuteAction = new Action<object>(GoSearch);
             GoNavigationCommand = new DelegateCommand();
@@ -113,17 +111,18 @@ namespace MyRecipe.ViewModel
 
         private void GoSearch(object parameter)
         {
+            string url = StaticURLHelper.CookByName;
             string kw = Keywords;
             Dictionary<string, string> dic = new Dictionary<string, string>();
             dic.Add("name", kw);
-            GetJSON(StaticURLHelper.CookByName, dic, Ht_FileWatchEvent2);
+            GetJSON(url, dic, Ht_FileWatchEvent2);
 
         }
 
         private void GoNavigation(object parameter)
         {
-            int id = (parameter as CookShowItem).id;
-            Type  t= typeof(DetailPage);
+            int id = ((parameter as ItemClickEventArgs).ClickedItem as CookShowItem).id;
+            Type t = typeof(DetailPage);
             Helper.NavigationHelper.NavigateTo(t, id);
 
         }

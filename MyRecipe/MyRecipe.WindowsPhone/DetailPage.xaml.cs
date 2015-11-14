@@ -25,8 +25,7 @@ namespace MyRecipe
     /// </summary>
     public sealed partial class DetailPage : Page
     {
-        public string t;
-        
+
         public DetailPage()
         {
             this.InitializeComponent();
@@ -40,14 +39,31 @@ namespace MyRecipe
         /// 此参数通常用于配置页。</param>
         protected override void OnNavigatedTo(NavigationEventArgs e)
         {
-            t = e.Parameter.ToString();
-            Messenger.Default.Send<string>(t, StaticMsgToken.Navigation);
-            this.ttt.Text = t;
+            var t = e.Parameter.ToString();
+            Messenger.Default.Send<string>(t, StaticMsgToken.NavigationA);
         }
 
-        private void WV_LoadCompleted(object sender, NavigationEventArgs e)
+        private void WV_Loaded(object sender, RoutedEventArgs e)
         {
-            this.WV.NavigateToString(WV.DataContext as string);
+
+        }
+
+        private void WV_DataContextChanged(FrameworkElement sender, DataContextChangedEventArgs args)
+        {
+            if (args.NewValue != null)
+            {
+                string content = args.NewValue as string;
+                this.WV.NavigateToString(content);
+            }
+        }
+
+        private void BTNBack_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void BTNFood_Click(object sender, RoutedEventArgs e)
+        {
 
         }
     }
