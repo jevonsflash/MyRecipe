@@ -13,9 +13,9 @@ namespace MyRecipe.ViewModel
 {
     public class FoodDetailPageViewModel : ViewModelBase
     {
+        public DelegateCommand GoBackCommand { get; set; }
 
         private FoodServer foodser = new FoodServer();
-        public DelegateCommand GoBackCommand { get; set; }
 
         private FoodShowItem foodItem;
 

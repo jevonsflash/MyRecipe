@@ -1,4 +1,5 @@
 Cook.xml
+Img\default.png
 Img\Header.png
 Assets\bg1.jpg
 Assets\Logo.scale-240.png
@@ -18,5 +19,6 @@ MyUserControl\FoodItemControl.xbf
 MyUserControl\FoodItemControl2.xbf
 MyUserControl\ItemControl.xbf
 MyUserControl\JMessboxControl.xbf
+MyUserControl\PictureControl.xbf
 SubMainPage.xbf
 Ico\search.png

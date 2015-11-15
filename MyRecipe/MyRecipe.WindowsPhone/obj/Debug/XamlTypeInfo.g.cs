@@ -124,7 +124,7 @@ namespace MyRecipe.MyRecipe_WindowsPhone_XamlTypeInfo
 
         private void InitTypeTables()
         {
-            _typeNameTable = new string[28];
+            _typeNameTable = new string[29];
             _typeNameTable[0] = "MyRecipe.ViewModel.ViewModelLocator";
             _typeNameTable[1] = "Object";
             _typeNameTable[2] = "MyRecipe.ViewModel.MainPageViewModel";
@@ -152,9 +152,10 @@ namespace MyRecipe.MyRecipe_WindowsPhone_XamlTypeInfo
             _typeNameTable[24] = "Boolean";
             _typeNameTable[25] = "MyRecipe.MainPage";
             _typeNameTable[26] = "MyRecipe.MyUserControl.JMessboxControl";
-            _typeNameTable[27] = "MyRecipe.SubMainPage";
+            _typeNameTable[27] = "MyRecipe.MyUserControl.PictureControl";
+            _typeNameTable[28] = "MyRecipe.SubMainPage";
 
-            _typeTable = new global::System.Type[28];
+            _typeTable = new global::System.Type[29];
             _typeTable[0] = typeof(global::MyRecipe.ViewModel.ViewModelLocator);
             _typeTable[1] = typeof(global::System.Object);
             _typeTable[2] = typeof(global::MyRecipe.ViewModel.MainPageViewModel);
@@ -182,7 +183,8 @@ namespace MyRecipe.MyRecipe_WindowsPhone_XamlTypeInfo
             _typeTable[24] = typeof(global::System.Boolean);
             _typeTable[25] = typeof(global::MyRecipe.MainPage);
             _typeTable[26] = typeof(global::MyRecipe.MyUserControl.JMessboxControl);
-            _typeTable[27] = typeof(global::MyRecipe.SubMainPage);
+            _typeTable[27] = typeof(global::MyRecipe.MyUserControl.PictureControl);
+            _typeTable[28] = typeof(global::MyRecipe.SubMainPage);
         }
 
         private int LookupTypeIndexByName(string typeName)
@@ -233,7 +235,8 @@ namespace MyRecipe.MyRecipe_WindowsPhone_XamlTypeInfo
         private object Activate_23_ItemControl() { return new global::MyRecipe.MyUserControl.ItemControl(); }
         private object Activate_25_MainPage() { return new global::MyRecipe.MainPage(); }
         private object Activate_26_JMessboxControl() { return new global::MyRecipe.MyUserControl.JMessboxControl(); }
-        private object Activate_27_SubMainPage() { return new global::MyRecipe.SubMainPage(); }
+        private object Activate_27_PictureControl() { return new global::MyRecipe.MyUserControl.PictureControl(); }
+        private object Activate_28_SubMainPage() { return new global::MyRecipe.SubMainPage(); }
         private void VectorAdd_14_BehaviorCollection(object instance, object item)
         {
             var collection = (global::System.Collections.Generic.ICollection<global::Windows.UI.Xaml.DependencyObject>)instance;
@@ -427,9 +430,16 @@ namespace MyRecipe.MyRecipe_WindowsPhone_XamlTypeInfo
                 xamlType = userType;
                 break;
 
-            case 27:   //  MyRecipe.SubMainPage
+            case 27:   //  MyRecipe.MyUserControl.PictureControl
+                userType = new global::MyRecipe.MyRecipe_WindowsPhone_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Windows.UI.Xaml.Controls.UserControl"));
+                userType.Activator = Activate_27_PictureControl;
+                userType.SetIsLocalType();
+                xamlType = userType;
+                break;
+
+            case 28:   //  MyRecipe.SubMainPage
                 userType = new global::MyRecipe.MyRecipe_WindowsPhone_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Windows.UI.Xaml.Controls.Page"));
-                userType.Activator = Activate_27_SubMainPage;
+                userType.Activator = Activate_28_SubMainPage;
                 userType.SetIsLocalType();
                 xamlType = userType;
                 break;

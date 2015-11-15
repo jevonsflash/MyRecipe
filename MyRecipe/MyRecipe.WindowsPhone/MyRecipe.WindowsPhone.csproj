@@ -104,6 +104,9 @@
     <Compile Include="MyUserControl\JMessboxControl.xaml.cs">
       <DependentUpon>JMessboxControl.xaml</DependentUpon>
     </Compile>
+    <Compile Include="MyUserControl\PictureControl.xaml.cs">
+      <DependentUpon>PictureControl.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="SubMainPage.xaml.cs">
       <DependentUpon>SubMainPage.xaml</DependentUpon>
@@ -181,6 +184,10 @@
       <SubType>Designer</SubType>
     </Page>
     <Page Include="MyUserControl\JMessboxControl.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="MyUserControl\PictureControl.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

@@ -21,13 +21,13 @@
                 </DataTemplate>
             </Pivot.HeaderTemplate>
             <Pivot.Title>
-                <Grid Height="84">
+                <Grid Margin="0,0,0,5.5" Height="84">
                     <Grid.ColumnDefinitions>
                         <ColumnDefinition Width="Auto"/>
                         <ColumnDefinition Width="Auto"/>
                     </Grid.ColumnDefinitions>
                     <Image Grid.Column="0" Source="Img/Header.png"/>
-                    <TextBlock Margin="5,0" Grid.Column="1" FontSize="32" Foreground="LightYellow" VerticalAlignment="Center">
+                    <TextBlock Margin="5,0" Grid.Column="1" FontSize="32" Foreground="LightYellow" VerticalAlignment="Center" FontWeight="Bold">
 						<Run Text="天天食疗"/>
                     </TextBlock>
 
@@ -76,7 +76,7 @@
                             </StackPanel>
                         </Border>
                     </Grid>
-                    <ListView Grid.Row="1"
+                    <ListView Margin="0,10.5" Grid.Row="1"
 						ItemsSource="{Binding SectionSearch, Mode=OneWay}"
 						IsItemClickEnabled="True"
 						ItemTemplate="{StaticResource CookItemTemplate}">

@@ -1,5 +1,6 @@
 ﻿using GalaSoft.MvvmLight.Messaging;
 using MyRecipe.Helper;
+using MyRecipe.Model;
 using MyRecipe.ViewModel;
 using System;
 using System.Collections.Generic;
@@ -25,7 +26,6 @@ namespace MyRecipe
     /// </summary>
     public sealed partial class SubMainPage : Page
     {
-        public string t;
 
         public SubMainPage()
         {
@@ -40,8 +40,8 @@ namespace MyRecipe
         /// 此参数通常用于配置页。</param>
         protected override void OnNavigatedTo(NavigationEventArgs e)
         {
-            t = e.Parameter.ToString();
-            Messenger.Default.Send<string>(t, StaticMsgToken.NavigationA);
+            var t = e.Parameter as BaseMap;
+            Messenger.Default.Send<BaseMap>(t, StaticMsgToken.NavigationA);
 
         }
     }

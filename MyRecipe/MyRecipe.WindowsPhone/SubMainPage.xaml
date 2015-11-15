@@ -13,8 +13,26 @@
         <ResourceDictionary Source="/Dictionary/MainDictionary.xaml"/>
     </Page.Resources>
 
-    <Grid>
-        <ListView
+    <Grid Background="{StaticResource BackgroundImageBrush}">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+        <Grid Margin="20.5,10.5,0,0" Grid.Row="0" Height="84">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="Auto"/>
+                <ColumnDefinition Width="Auto"/>
+            </Grid.ColumnDefinitions>
+            <Image Grid.Column="0" Source="Img/Header.png"/>
+            <TextBlock Margin="5,0" Grid.Column="1" FontSize="32" Foreground="LightYellow" VerticalAlignment="Center" FontFamily="Segoe WP" FontWeight="Bold">
+						<Run Text="天天食疗"/>
+            </TextBlock>
+
+        </Grid>
+        <TextBlock Grid.Row="1" Margin="27.5,0" Text="{Binding Title,Mode=OneWay}" Foreground="LightYellow" FontSize="21.333"  />
+        <ListView Grid.Row="2"
 					ItemsSource="{Binding CurrentCategoryItems, Mode=OneWay}"
 					ItemTemplate="{StaticResource CookItemTemplate}"
 					SelectionMode="Single"
@@ -25,6 +43,8 @@
                 </Core:EventTriggerBehavior>
             </Interactivity:Interaction.Behaviors>
         </ListView>
-
+        <StackPanel Background="White" Grid.Row="3" Orientation="Horizontal" >
+            <Button x:Name="BTNBack" BorderThickness="0" Foreground="Black" Command="{Binding GoBackCommand}" HorizontalAlignment="Center" Content="返回" />
+        </StackPanel>
     </Grid>
 </Page>

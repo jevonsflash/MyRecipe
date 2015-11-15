@@ -63,9 +63,8 @@ namespace MyRecipe.Server
             oFoodShowItem.rcount = rcount;
             oFoodShowItem.fcount = fcount;
             oFoodShowItem.name = name;//名称
-            oFoodShowItem.img = img;//图片
             oFoodShowItem.food = food;//食物
-            oFoodShowItem.img = img;//图片, 
+            oFoodShowItem.img = ImagesHandler(img)[0] + "_125";//图片, 
             oFoodShowItem.message = message;
             oFoodShowItem.description = description;//描述
             oFoodShowItem.keywords = keywords;//关键字
@@ -73,6 +72,24 @@ namespace MyRecipe.Server
             oFoodShowItem.disease = disease;
 
             return oFoodShowItem;
+        }
+        private string[] ImagesHandler(string src)
+        {
+            string[] temp = src.Split(',');
+
+            if (string.IsNullOrEmpty(src))
+            {
+                return new string[] { "ms-appx:///Img/default.png" };
+            }
+
+            else
+            {
+                for (int i = 0; i < temp.Length; i++)
+                {
+                    temp[i] = string.Format("http://tnfs.tngou.net/image{0}", temp[i]);
+                }
+            }
+            return temp;
         }
 
     }

@@ -57,6 +57,18 @@ namespace MyRecipe.ViewModel
             }
         }
 
+        private List<Uri> image;
+
+        public List<Uri> Image
+        {
+            get { return image; }
+            set
+            {
+                image = value;
+                RaisePropertyChanged("Image");
+            }
+        }
+
         public DetailPageViewModel()
         {
             //注册消息
@@ -102,12 +114,21 @@ namespace MyRecipe.ViewModel
                 CookItem = cookser.CookObjectDeserializer(e.Node);
 
                 List<string> foodlist = new List<string>();
+                List<Uri> imagelist = new List<Uri>();
                 string[] foodarr = CookItem.food.Split(',');
+                string[] imagearr = CookItem.images;
                 foreach (var item in foodarr)
                 {
                     foodlist.Add(item);
                 }
+                foreach (var item in imagearr)
+                {
+                    imagelist.Add(new Uri(item));
+
+                }
                 Food = foodlist;
+                Image = imagelist;
+
             });
         }
 

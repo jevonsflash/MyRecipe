@@ -12,7 +12,7 @@ namespace MyRecipe.Model
     {
         public string name { get; set; }
         public string img { get; set; }
-        public string images { get; set; }
+        public string[] images { get; set; }
         public string tag { get; set; }
         public string food { get; set; }
         public string message { get; set; }

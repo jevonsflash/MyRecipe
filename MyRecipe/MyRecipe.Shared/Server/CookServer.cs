@@ -85,13 +85,31 @@ namespace MyRecipe.Server
             oCookShowItem.name = name;//名称
             oCookShowItem.img = img;//图片
             oCookShowItem.food = food;//食物
-            oCookShowItem.img = img;//图片, 
-            oCookShowItem.images = string.Format("http://tnfs.tngou.net/image{0}", images);//图片, 
+            oCookShowItem.img = ImagesHandler(img)[0]+ "_125";//图片, 
+            oCookShowItem.images = ImagesHandler(images);//图片, 
             oCookShowItem.description = description;//描述
             oCookShowItem.keywords = keywords;//关键字
             oCookShowItem.message = message;//资讯内容
 
             return oCookShowItem;
+        }
+        private string[] ImagesHandler(string src)
+        {
+            string[] temp = src.Split(','); 
+
+            if (string.IsNullOrEmpty(src))
+            {
+                return new string[] { "ms-appx:///Img/default.png" };
+            }
+
+            else
+            {
+                for (int i = 0; i < temp.Length; i++)
+                {
+                    temp[i] = string.Format("http://tnfs.tngou.net/image{0}", temp[i]);
+                }
+            }
+            return temp;
         }
 
     }

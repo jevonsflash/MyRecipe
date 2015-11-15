@@ -39,6 +39,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="$(MSBuildThisFileDirectory)Cook.xml" />
+    <Content Include="$(MSBuildThisFileDirectory)Img\default.png" />
     <Content Include="$(MSBuildThisFileDirectory)Img\Header.png" />
   </ItemGroup>
 </Project>

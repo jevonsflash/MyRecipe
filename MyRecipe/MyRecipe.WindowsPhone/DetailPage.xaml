@@ -6,7 +6,7 @@
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     xmlns:cv="using:MyRecipe.Converter"
-      mc:Ignorable="d"
+    mc:Ignorable="d"
     Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
     <Page.Resources>
         <cv:Visibility2Bool  x:Key="VisibleConvert"/>
@@ -25,7 +25,7 @@
             </Grid.ColumnDefinitions>
 
             <Border Background="{ThemeResource ListViewItemPlaceholderBackgroundThemeBrush}" Margin="9.5,9.5" Grid.Column="0" HorizontalAlignment="Left">
-                <Image Source="{Binding CookItem.images,Mode=OneWay}" Stretch="UniformToFill" Height="179" Width="125"/>
+                <Image Source="{Binding CookItem.img,Mode=OneWay}" Stretch="UniformToFill" Height="179" Width="125"/>
             </Border>
             <StackPanel Grid.Column="1" Margin="10.5,10.5,0,0">
                 <TextBlock Text="{Binding CookItem.name,Mode=OneWay}" TextWrapping="Wrap" Style="{ThemeResource ListViewItemTextBlockStyle}" Foreground="SaddleBrown"/>
@@ -38,7 +38,7 @@
                 <RowDefinition Height="*"></RowDefinition>
                 <RowDefinition Height="Auto"></RowDefinition>
             </Grid.RowDefinitions>
-            <WebView Opacity="{Binding ElementName=BTNFood, Path=IsChecked, Converter={StaticResource ResourceKey=OpacityConvert}}" x:Name="WV" Grid.Row="0" DataContext="{Binding CookItem.message,Mode=OneWay}" DataContextChanged="WV_DataContextChanged"/>
+            <WebView Margin="9.5,0" Opacity="{Binding ElementName=BTNFood, Path=IsChecked, Converter={StaticResource ResourceKey=OpacityConvert}}" x:Name="WV" Grid.Row="0" DataContext="{Binding CookItem.message,Mode=OneWay}" DataContextChanged="WV_DataContextChanged"/>
             <StackPanel Grid.Row="1" Orientation="Horizontal" HorizontalAlignment="Center">
                 <Button x:Name="BTNBack" BorderThickness="0" Click="BTNBack_Click" Foreground="Black" Command="{Binding GoBackCommand}" HorizontalAlignment="Center">返回</Button>
                 <ToggleButton x:Name="BTNFood" BorderThickness="0" Click="BTNFood_Click" Foreground="Black" HorizontalAlignment="Center" Width="261">准备食材</ToggleButton>
@@ -51,5 +51,6 @@
                 VerticalAlignment="Bottom" HorizontalAlignment="Right">
             </MyUserControl:FoodItemControl2>
         </Grid>
+        <!--<MyUserControl:PictureControl Grid.Row="1" Grid.RowSpan="2" DataContext="{Binding Image,Mode=OneWay}"></MyUserControl:PictureControl>-->
     </Grid>
 </Page>

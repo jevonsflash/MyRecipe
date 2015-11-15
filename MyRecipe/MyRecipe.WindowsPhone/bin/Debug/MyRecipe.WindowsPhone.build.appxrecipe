@@ -75,6 +75,9 @@
     <AppxPackagedFile Include="D:\Project\C#\test\MyRecipe\MyRecipe\MyRecipe.WindowsPhone\Ico\search.png">
       <PackagePath>Ico\search.png</PackagePath>
     </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\Project\C#\test\MyRecipe\MyRecipe\MyRecipe.Shared\Img\default.png">
+      <PackagePath>Img\default.png</PackagePath>
+    </AppxPackagedFile>
     <AppxPackagedFile Include="D:\Project\C#\test\MyRecipe\MyRecipe\MyRecipe.Shared\Img\Header.png">
       <PackagePath>Img\Header.png</PackagePath>
     </AppxPackagedFile>
@@ -110,6 +113,9 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="D:\Project\C#\test\MyRecipe\MyRecipe\MyRecipe.WindowsPhone\bin\Debug\MyUserControl\JMessboxControl.xbf">
       <PackagePath>MyUserControl\JMessboxControl.xbf</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\Project\C#\test\MyRecipe\MyRecipe\MyRecipe.WindowsPhone\bin\Debug\MyUserControl\PictureControl.xbf">
+      <PackagePath>MyUserControl\PictureControl.xbf</PackagePath>
     </AppxPackagedFile>
     <AppxPackagedFile Include="D:\Project\C#\test\MyRecipe\MyRecipe\MyRecipe.WindowsPhone\bin\Debug\SubMainPage.xbf">
       <PackagePath>SubMainPage.xbf</PackagePath>

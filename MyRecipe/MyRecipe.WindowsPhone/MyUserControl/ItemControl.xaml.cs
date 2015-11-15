@@ -56,8 +56,8 @@ namespace MyRecipe.MyUserControl
 
         private void GVCon_ItemClick(object sender, ItemClickEventArgs e)
         {
-            int id = (e.ClickedItem as BaseMap).id;
-            Helper.NavigationHelper.NavigateTo(typeof(SubMainPage), id);
+            BaseMap param = (e.ClickedItem as BaseMap);
+            Helper.NavigationHelper.NavigateTo(typeof(SubMainPage), param);
         }
     }
 }
