@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <PropertyGroup>
-    <Machine>DESKTOP-OFF7OLQ</Machine>
+    <Machine>DESKTOP-2B56PN6</Machine>
     <WindowsUser>jevon</WindowsUser>
     <TargetPlatformIdentifier>WindowsPhoneApp</TargetPlatformIdentifier>
     <TargetOsVersion>6.3</TargetOsVersion>
@@ -57,9 +57,6 @@
       <PackagePath>Assets\SmallLogo.scale-240.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="D:\Project\C#\test\MyRecipe\MyRecipe\MyRecipe.WindowsPhone\Assets\SplashScreen.scale-240.png">
-      <PackagePath>Assets\SplashScreen.scale-240.png</PackagePath>
-    </AppxPackagedFile>
     <AppxPackagedFile Include="D:\Project\C#\test\MyRecipe\MyRecipe\MyRecipe.WindowsPhone\Assets\Square71x71Logo.scale-240.png">
       <PackagePath>Assets\Square71x71Logo.scale-240.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
@@ -72,6 +69,9 @@
       <PackagePath>Assets\WideLogo.scale-240.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
     </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\Project\C#\test\MyRecipe\MyRecipe\MyRecipe.WindowsPhone\Ico\about.png">
+      <PackagePath>Ico\about.png</PackagePath>
+    </AppxPackagedFile>
     <AppxPackagedFile Include="D:\Project\C#\test\MyRecipe\MyRecipe\MyRecipe.WindowsPhone\Ico\search.png">
       <PackagePath>Ico\search.png</PackagePath>
     </AppxPackagedFile>
@@ -81,6 +81,9 @@
     <AppxPackagedFile Include="D:\Project\C#\test\MyRecipe\MyRecipe\MyRecipe.Shared\Img\Header.png">
       <PackagePath>Img\Header.png</PackagePath>
     </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\Project\C#\test\MyRecipe\MyRecipe\MyRecipe.Shared\Img\Header2.png">
+      <PackagePath>Img\Header2.png</PackagePath>
+    </AppxPackagedFile>
     <AppxPackagedFile Include="D:\Project\C#\test\MyRecipe\MyRecipe\MyRecipe.Shared\Cook.xml">
       <PackagePath>Cook.xml</PackagePath>
     </AppxPackagedFile>
@@ -89,6 +92,9 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="D:\Project\C#\test\MyRecipe\MyRecipe\MyRecipe.WindowsPhone\bin\Debug\App.xbf">
       <PackagePath>App.xbf</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\Project\C#\test\MyRecipe\MyRecipe\MyRecipe.WindowsPhone\bin\Debug\AboutPage.xbf">
+      <PackagePath>AboutPage.xbf</PackagePath>
     </AppxPackagedFile>
     <AppxPackagedFile Include="D:\Project\C#\test\MyRecipe\MyRecipe\MyRecipe.WindowsPhone\bin\Debug\DetailPage.xbf">
       <PackagePath>DetailPage.xbf</PackagePath>

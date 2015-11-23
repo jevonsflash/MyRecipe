@@ -1,14 +1,15 @@
 Cook.xml
 Img\default.png
 Img\Header.png
+Img\Header2.png
 Assets\bg1.jpg
 Assets\Logo.scale-240.png
 Assets\SmallLogo.scale-240.png
 Assets\SplashScreen.jpg
-Assets\SplashScreen.scale-240.png
 Assets\Square71x71Logo.scale-240.png
 Assets\StoreLogo.scale-240.png
 Assets\WideLogo.scale-240.png
+AboutPage.xbf
 App.xbf
 DetailPage.xbf
 Dictionary\MainDictionary.xbf
@@ -21,4 +22,5 @@ MyUserControl\ItemControl.xbf
 MyUserControl\JMessboxControl.xbf
 MyUserControl\PictureControl.xbf
 SubMainPage.xbf
+Ico\about.png
 Ico\search.png

@@ -20,6 +20,7 @@ namespace MyRecipe.ViewModel
         public event EventHandler CanExecuteChanged;
         public DelegateCommand GoSearchCommand { get; set; }
         public DelegateCommand GoNavigationCommand { get; set; }
+        public DelegateCommand GoAboutCommand { get; set; }
 
         private MapServer mapser = new MapServer();
         private CookServer cookser = new CookServer();
@@ -83,6 +84,9 @@ namespace MyRecipe.ViewModel
             GoSearchCommand.ExecuteAction = new Action<object>(GoSearch);
             GoNavigationCommand = new DelegateCommand();
             GoNavigationCommand.ExecuteAction = new Action<object>(GoNavigation);
+            GoAboutCommand = new DelegateCommand();
+            GoAboutCommand.ExecuteAction = new Action<object>(GoAbout);
+
         }
 
         public async Task GetSectionCategory()
@@ -126,5 +130,12 @@ namespace MyRecipe.ViewModel
             Helper.NavigationHelper.NavigateTo(t, id);
 
         }
+        private void GoAbout(object parameter)
+        {
+            Type t = typeof(AboutPage);
+            Helper.NavigationHelper.NavigateTo(t);
+
+        }
+
     }
 }

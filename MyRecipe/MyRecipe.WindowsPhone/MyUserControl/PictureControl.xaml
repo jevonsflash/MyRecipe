@@ -1,0 +1,37 @@
+﻿<UserControl
+    x:Class="MyRecipe.MyUserControl.PictureControl"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:MyRecipe.MyUserControl"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    d:DesignHeight="300"
+    d:DesignWidth="400">
+    <Grid>
+        <StackPanel>
+
+            <!--
+                FlipView - 滑动视图控件
+                    UseTouchAnimationsForAllNavigation - true 代表无论是基于触控的模式，还是基于按钮的模式，还是编程的模式，FlipView 都会有一致的动画体验
+            -->
+            <FlipView x:Name="flipView" Width="480" Height="270" BorderBrush="Black" BorderThickness="1" UseTouchAnimationsForAllNavigation="True" ItemsSource="{Binding Mode=OneWay}">
+                <FlipView.ItemTemplate>
+                    <DataTemplate>
+                        <Grid>
+                            <Image Width="480" Height="270" Source="{Binding}" Stretch="UniformToFill"/>
+                            <Border Background="#A5000000" Height="80" VerticalAlignment="Bottom">
+                                <TextBlock Text="{Binding Title}" FontSize="26.667" Foreground="#CCFFFFFF" Padding="15,20"/>
+                            </Border>
+                        </Grid>
+                    </DataTemplate>
+                </FlipView.ItemTemplate>
+                <FlipView.ItemsPanel>
+                    <ItemsPanelTemplate>
+                        <VirtualizingStackPanel Orientation="Horizontal"/>
+                    </ItemsPanelTemplate>
+                </FlipView.ItemsPanel>
+            </FlipView>
+        </StackPanel>
+    </Grid>
+</UserControl>

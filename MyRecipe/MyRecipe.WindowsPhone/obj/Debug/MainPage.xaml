@@ -17,7 +17,7 @@
         <Pivot>
             <Pivot.HeaderTemplate>
                 <DataTemplate>
-                    <TextBlock Text="{Binding}" Foreground="LightYellow" FontSize="26.667"/>
+                    <TextBlock Text="{Binding}" Margin="10,5" Foreground="LightYellow" FontSize="26.667"/>
                 </DataTemplate>
             </Pivot.HeaderTemplate>
             <Pivot.Title>
@@ -25,12 +25,16 @@
                     <Grid.ColumnDefinitions>
                         <ColumnDefinition Width="Auto"/>
                         <ColumnDefinition Width="Auto"/>
+                        <ColumnDefinition Width="150"/>
                     </Grid.ColumnDefinitions>
                     <Image Grid.Column="0" Source="Img/Header.png"/>
                     <TextBlock Margin="5,0" Grid.Column="1" FontSize="32" Foreground="LightYellow" VerticalAlignment="Center" FontWeight="Bold">
 						<Run Text="天天食疗"/>
                     </TextBlock>
-
+                    <StackPanel Grid.Column="2" Orientation="Vertical" HorizontalAlignment="Right" VerticalAlignment="Top">
+                        <Image Height="50" Source="Ico/about.png"></Image>
+                        <HyperlinkButton Command="{Binding GoAboutCommand}" FontSize="18" Width="62">关于</HyperlinkButton>
+                    </StackPanel>
                 </Grid>
             </Pivot.Title>
             <PivotItem Header="食疗菜谱">

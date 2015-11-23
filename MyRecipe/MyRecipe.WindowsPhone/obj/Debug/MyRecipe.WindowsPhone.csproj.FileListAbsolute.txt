@@ -98,3 +98,8 @@ D:\Project\C#\test\MyRecipe\MyRecipe\MyRecipe.WindowsPhone\obj\Debug\MyUserContr
 D:\Project\C#\test\MyRecipe\MyRecipe\MyRecipe.WindowsPhone\obj\Debug\MyUserControl\PictureControl.xaml
 D:\Project\C#\test\MyRecipe\MyRecipe\MyRecipe.WindowsPhone\obj\Debug\MyUserControl\PictureControl.xbf
 D:\Project\C#\test\MyRecipe\MyRecipe\MyRecipe.WindowsPhone\obj\Debug\Dictionary\MainDictionary.xbf
+D:\Project\C#\test\MyRecipe\MyRecipe\MyRecipe.WindowsPhone\obj\Debug\AboutPage.g.i.cs
+D:\Project\C#\test\MyRecipe\MyRecipe\MyRecipe.WindowsPhone\obj\Debug\AboutPage.g.cs
+D:\Project\C#\test\MyRecipe\MyRecipe\MyRecipe.WindowsPhone\obj\Debug\AboutPage.xaml
+D:\Project\C#\test\MyRecipe\MyRecipe\MyRecipe.WindowsPhone\obj\Debug\AboutPage.xbf
+D:\Project\C#\test\MyRecipe\MyRecipe\MyRecipe.WindowsPhone\bin\Debug\AboutPage.xbf

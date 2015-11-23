@@ -31,6 +31,7 @@
     <Compile Include="$(MSBuildThisFileDirectory)Server\CookServer.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Server\FoodServer.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Server\MapServer.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)ViewModel\AboutPageViewModel.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)ViewModel\DetailPageViewModel.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)ViewModel\FoodDetailPageViewModel.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)ViewModel\MainPageViewModel.cs" />
@@ -41,5 +42,6 @@
     <Content Include="$(MSBuildThisFileDirectory)Cook.xml" />
     <Content Include="$(MSBuildThisFileDirectory)Img\default.png" />
     <Content Include="$(MSBuildThisFileDirectory)Img\Header.png" />
+    <Content Include="$(MSBuildThisFileDirectory)Img\Header2.png" />
   </ItemGroup>
 </Project>
