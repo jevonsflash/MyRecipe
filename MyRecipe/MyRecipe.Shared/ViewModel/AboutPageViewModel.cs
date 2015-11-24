@@ -3,8 +3,9 @@ using MyRecipe.Command;
 using System;
 using System.Collections.Generic;
 using System.Text;
+#if WINDOWS_PHONE_APP
 using Windows.ApplicationModel.Email;
-
+#endif
 namespace MyRecipe.ViewModel
 {
     public class AboutPageViewModel : ViewModelBase
@@ -51,12 +52,24 @@ namespace MyRecipe.ViewModel
 
         private async void GoMail(object obj)
         {
-            var emailMessage = new EmailMessage();
+            string subject = "";
             string body = "";
-            emailMessage.Body = body;
             string emailAddress = "jevons@hotmail.com";
+
+#if WINDOWS_PHONE_APP
+
+            var emailMessage = new EmailMessage();
+            emailMessage.Body = body;
             emailMessage.To.Add(new EmailRecipient(emailAddress));
             await EmailManager.ShowComposeNewEmailAsync(emailMessage);
+#endif
+#if WINDOWS_APP
+
+            string uriToLaunch = "mailto:" + emailAddress + "?subject=" + subject + "&body=" + body;
+            UriBuilder uriSite = new UriBuilder(uriToLaunch);
+            await Windows.System.Launcher.LaunchUriAsync(uriSite.Uri);
+#endif
+
         }
 
         private async void GoWeibo(object obj)

@@ -7,7 +7,9 @@ using Windows.ApplicationModel;
 using Windows.ApplicationModel.Activation;
 using Windows.Foundation;
 using Windows.Foundation.Collections;
+#if WINDOWS_PHONE_APP
 using Windows.Phone.UI.Input;
+#endif
 using Windows.UI.Xaml;
 using Windows.UI.Xaml.Controls;
 using Windows.UI.Xaml.Controls.Primitives;
@@ -138,6 +140,7 @@ namespace MyRecipe
             // TODO: 保存应用程序状态并停止任何后台活动
             deferral.Complete();
         }
+#if WINDOWS_PHONE_APP
 
         private void HardwareButtons_BackPressed(object sender, BackPressedEventArgs e)
         {
@@ -153,5 +156,6 @@ namespace MyRecipe
                 e.Handled = true;
             }
         }
+#endif
     }
 }

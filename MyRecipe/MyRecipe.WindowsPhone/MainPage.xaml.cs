@@ -31,7 +31,6 @@ namespace MyRecipe
         {
             this.InitializeComponent();
             this.DataContext = new MainPageViewModel();
-            HardwareButtons.BackPressed += HardwareButtons_BackPressed;
 
         }
 
@@ -52,8 +51,16 @@ namespace MyRecipe
 
         }
 
-
-
+        protected override void OnNavigatedFrom(NavigationEventArgs e)
+        {
+            HardwareButtons.BackPressed -= HardwareButtons_BackPressed;
+            base.OnNavigatedFrom(e);
+        }
+        protected override void OnNavigatedTo(NavigationEventArgs e)
+        {
+            HardwareButtons.BackPressed += HardwareButtons_BackPressed;
+            base.OnNavigatedTo(e);
+        }
 
         private void HardwareButtons_BackPressed(object sender, BackPressedEventArgs e)
         {
