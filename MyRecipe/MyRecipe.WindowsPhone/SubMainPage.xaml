@@ -27,12 +27,12 @@
             </Grid.ColumnDefinitions>
             <Image Grid.Column="0" Source="Img/Header.png"/>
             <TextBlock Margin="5,0" Grid.Column="1" FontSize="32" Foreground="LightYellow" VerticalAlignment="Center" FontFamily="Segoe WP" FontWeight="Bold">
-						<Run Text="天天食疗"/>
+						<Run Text="健康食疗菜谱"/>
             </TextBlock>
 
         </Grid>
         <TextBlock Grid.Row="1" Margin="27.5,0" Text="{Binding Title,Mode=OneWay}" Foreground="LightYellow" FontSize="21.333"  />
-        <ListView Grid.Row="2"
+        <ListView Grid.Row="2" Margin="10"
 					ItemsSource="{Binding CurrentCategoryItems, Mode=OneWay}"
 					ItemTemplate="{StaticResource CookItemTemplate}"
 					SelectionMode="Single"

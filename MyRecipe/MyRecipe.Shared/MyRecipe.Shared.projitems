@@ -43,5 +43,6 @@
     <Content Include="$(MSBuildThisFileDirectory)Img\default.png" />
     <Content Include="$(MSBuildThisFileDirectory)Img\Header.png" />
     <Content Include="$(MSBuildThisFileDirectory)Img\Header2.png" />
+    <Content Include="$(MSBuildThisFileDirectory)Img\UserContro.png" />
   </ItemGroup>
 </Project>

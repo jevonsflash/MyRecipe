@@ -8,6 +8,7 @@ using MyRecipe.Server;
 using System;
 using System.Collections.Generic;
 using System.Text;
+using Windows.UI.Xaml;
 
 namespace MyRecipe.ViewModel
 {
@@ -42,11 +43,24 @@ namespace MyRecipe.ViewModel
             }
         }
 
+        private Visibility isMsgVisible;
+
+        public Visibility IsMsgVisible
+        {
+            get { return isMsgVisible; }
+            set
+            {
+                isMsgVisible = value;
+                RaisePropertyChanged("IsMsgVisible");
+            }
+        }
+
         public FoodDetailPageViewModel()
         {
             Messenger.Default.Register<string>(this, StaticMsgToken.NavigationB, InitData);
             GoBackCommand = new DelegateCommand();
             GoBackCommand.ExecuteAction = new Action<object>(GoBack);
+            IsMsgVisible = Visibility.Collapsed;
 
         }
         private void GoBack(object obj)
@@ -74,7 +88,15 @@ namespace MyRecipe.ViewModel
             DispatcherHelper.CheckBeginInvokeOnUI(() =>
             {
                 FoodItem = foodser.FoodObjectDeserializer(e.Node);
-                WebViewData = FoodItem.summary + FoodItem.message;
+                if (FoodItem != null)
+                {
+                    WebViewData = FoodItem.summary + FoodItem.message;
+                    IsMsgVisible = Visibility.Collapsed;
+                }
+                else
+                {
+                    IsMsgVisible = Visibility.Visible;
+                }
             });
         }
 

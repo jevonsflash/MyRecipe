@@ -10,6 +10,7 @@ using Windows.Foundation;
 using Windows.Foundation.Collections;
 using Windows.Phone.UI.Input;
 using Windows.UI;
+using Windows.UI.ViewManagement;
 using Windows.UI.Xaml;
 using Windows.UI.Xaml.Controls;
 using Windows.UI.Xaml.Controls.Primitives;
@@ -31,7 +32,11 @@ namespace MyRecipe
         {
             this.InitializeComponent();
             this.DataContext = new MainPageViewModel();
-
+            this.NavigationCacheMode = NavigationCacheMode.Enabled;
+            StatusBar sb = StatusBar.GetForCurrentView();
+            //sb.ForegroundColor = Colors.Transparent;
+             sb.BackgroundColor = Colors.Black;
+            sb.BackgroundOpacity = 0.5;
         }
 
         private void TBMainSearch_Loaded(object sender, RoutedEventArgs e)

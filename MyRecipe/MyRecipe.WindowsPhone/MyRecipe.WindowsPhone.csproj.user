@@ -14,5 +14,8 @@
   </PropertyGroup>
   <PropertyGroup>
     <ProjectView>ShowAllFiles</ProjectView>
+    <AppxShowAllApps>False</AppxShowAllApps>
+    <AppxPackageIsForStore>False</AppxPackageIsForStore>
+    <AppxBuildConfigurationSelection>neutral</AppxBuildConfigurationSelection>
   </PropertyGroup>
 </Project>

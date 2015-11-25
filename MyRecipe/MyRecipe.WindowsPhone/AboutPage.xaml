@@ -52,7 +52,7 @@
                         <Image Grid.Row="0" Source="Img/Header2.png"></Image>
                         <StackPanel Grid.Row="1">
                             <TextBlock  HorizontalAlignment="Center" FontSize="21">
-                            天天食疗 -  版本<Run x:Name="TBVersion" Text="{Binding Version,Mode=OneWay}"></Run>
+                            健康食疗菜谱 -  版本<Run x:Name="TBVersion" Text="{Binding Version,Mode=OneWay}"></Run>
                             </TextBlock>
                             <TextBlock HorizontalAlignment="Center" FontSize="21">
                             Design &amp; Code By LinXiao &#169; 2015
@@ -70,13 +70,12 @@
                                     <LineBreak/>
                                     Metro Studio
                                     <LineBreak/>
-                                    另外特别感谢曾经给予我帮助的人们。
                                 </Paragraph>
                             </RichTextBlock.Blocks>
                         </RichTextBlock>
 
                         <StackPanel Grid.Row="4" Height="55" Background="{StaticResource PhoneChromeBrush}">
-                            <TextBlock  Text="关于Mato" Margin="9,15,0,0"/>
+                            <TextBlock  Text="关于" Margin="9,15,0,0"/>
                         </StackPanel>
                         <StackPanel  Grid.Row="5" >
                             <RichTextBlock>
@@ -98,9 +97,12 @@
 
                             <RichTextBlock>
                                 <RichTextBlock.Blocks>
-                                    <Paragraph>天天食疗是一款基于互联网健康食疗APP， 支持食疗菜谱查询。
+                                    <Paragraph>
+                                        &#160;&#160;&#160;&#160;食物是人类治病最好的药品，食疗就是用食物代替药物而使疾病得到治疗、使细胞恢复功能、使人体恢复健康，
                                         <LineBreak/>
-                                        如果您在使用的过程中有疑问，可以参考下面的使用帮助，也可以发送邮件给我。
+                                        &#160;&#160;&#160;健康食疗菜谱是一款基于互联网的健康食疗APP，包含上万份健康菜谱、健康食材作为指导，上百份食疗疗效作为参考，支持食疗菜谱查询。减肥，养生，辅助治疗，尽在健康食疗菜谱。 想学菜，要健康，尽在健康食疗菜谱。
+                                        <LineBreak/>
+                                        &#160;&#160;&#160;如果您在使用的过程中有疑问，可以参考下面的使用帮助，也可以发送邮件给我。
                                     邮件链接在【意见反馈】一栏。
                                     </Paragraph>
                                 </RichTextBlock.Blocks>
@@ -111,7 +113,7 @@
                         </StackPanel>
                         <RichTextBlock Grid.Row="8">
                             <RichTextBlock.Blocks>
-                                <Paragraph >如果您觉得天天食疗不错，请支持我！
+                                <Paragraph >如果您觉得健康食疗菜谱不错，请支持我！
                                 </Paragraph>
                             </RichTextBlock.Blocks>
                         </RichTextBlock>

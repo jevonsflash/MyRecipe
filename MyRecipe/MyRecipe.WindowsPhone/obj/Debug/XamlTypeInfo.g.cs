@@ -124,7 +124,7 @@ namespace MyRecipe.MyRecipe_WindowsPhone_XamlTypeInfo
 
         private void InitTypeTables()
         {
-            _typeNameTable = new string[32];
+            _typeNameTable = new string[33];
             _typeNameTable[0] = "MyRecipe.ViewModel.ViewModelLocator";
             _typeNameTable[1] = "Object";
             _typeNameTable[2] = "MyRecipe.ViewModel.MainPageViewModel";
@@ -140,25 +140,26 @@ namespace MyRecipe.MyRecipe_WindowsPhone_XamlTypeInfo
             _typeNameTable[12] = "MyRecipe.MyUserControl.FoodItemControl2";
             _typeNameTable[13] = "MyRecipe.MyUserControl.FoodItemControl";
             _typeNameTable[14] = "MyRecipe.DetailPage";
-            _typeNameTable[15] = "MyRecipe.FoodDetailPage";
-            _typeNameTable[16] = "Microsoft.Xaml.Interactivity.Interaction";
-            _typeNameTable[17] = "Microsoft.Xaml.Interactivity.BehaviorCollection";
-            _typeNameTable[18] = "Windows.UI.Xaml.DependencyObjectCollection";
-            _typeNameTable[19] = "Windows.UI.Xaml.DependencyObject";
-            _typeNameTable[20] = "Microsoft.Xaml.Interactions.Core.EventTriggerBehavior";
-            _typeNameTable[21] = "Microsoft.Xaml.Interactivity.ActionCollection";
-            _typeNameTable[22] = "String";
-            _typeNameTable[23] = "Microsoft.Xaml.Interactions.Core.InvokeCommandAction";
-            _typeNameTable[24] = "System.Windows.Input.ICommand";
-            _typeNameTable[25] = "Windows.UI.Xaml.Data.IValueConverter";
-            _typeNameTable[26] = "MyRecipe.MyUserControl.ItemControl";
-            _typeNameTable[27] = "Boolean";
-            _typeNameTable[28] = "MyRecipe.MainPage";
-            _typeNameTable[29] = "MyRecipe.MyUserControl.JMessboxControl";
-            _typeNameTable[30] = "MyRecipe.MyUserControl.PictureControl";
-            _typeNameTable[31] = "MyRecipe.SubMainPage";
+            _typeNameTable[15] = "MyRecipe.MyUserControl.MsgBoxControl";
+            _typeNameTable[16] = "String";
+            _typeNameTable[17] = "MyRecipe.FoodDetailPage";
+            _typeNameTable[18] = "Microsoft.Xaml.Interactivity.Interaction";
+            _typeNameTable[19] = "Microsoft.Xaml.Interactivity.BehaviorCollection";
+            _typeNameTable[20] = "Windows.UI.Xaml.DependencyObjectCollection";
+            _typeNameTable[21] = "Windows.UI.Xaml.DependencyObject";
+            _typeNameTable[22] = "Microsoft.Xaml.Interactions.Core.EventTriggerBehavior";
+            _typeNameTable[23] = "Microsoft.Xaml.Interactivity.ActionCollection";
+            _typeNameTable[24] = "Microsoft.Xaml.Interactions.Core.InvokeCommandAction";
+            _typeNameTable[25] = "System.Windows.Input.ICommand";
+            _typeNameTable[26] = "Windows.UI.Xaml.Data.IValueConverter";
+            _typeNameTable[27] = "MyRecipe.MyUserControl.ItemControl";
+            _typeNameTable[28] = "Boolean";
+            _typeNameTable[29] = "MyRecipe.MainPage";
+            _typeNameTable[30] = "MyRecipe.MyUserControl.JMessboxControl";
+            _typeNameTable[31] = "MyRecipe.MyUserControl.PictureControl";
+            _typeNameTable[32] = "MyRecipe.SubMainPage";
 
-            _typeTable = new global::System.Type[32];
+            _typeTable = new global::System.Type[33];
             _typeTable[0] = typeof(global::MyRecipe.ViewModel.ViewModelLocator);
             _typeTable[1] = typeof(global::System.Object);
             _typeTable[2] = typeof(global::MyRecipe.ViewModel.MainPageViewModel);
@@ -174,23 +175,24 @@ namespace MyRecipe.MyRecipe_WindowsPhone_XamlTypeInfo
             _typeTable[12] = typeof(global::MyRecipe.MyUserControl.FoodItemControl2);
             _typeTable[13] = typeof(global::MyRecipe.MyUserControl.FoodItemControl);
             _typeTable[14] = typeof(global::MyRecipe.DetailPage);
-            _typeTable[15] = typeof(global::MyRecipe.FoodDetailPage);
-            _typeTable[16] = typeof(global::Microsoft.Xaml.Interactivity.Interaction);
-            _typeTable[17] = typeof(global::Microsoft.Xaml.Interactivity.BehaviorCollection);
-            _typeTable[18] = typeof(global::Windows.UI.Xaml.DependencyObjectCollection);
-            _typeTable[19] = typeof(global::Windows.UI.Xaml.DependencyObject);
-            _typeTable[20] = typeof(global::Microsoft.Xaml.Interactions.Core.EventTriggerBehavior);
-            _typeTable[21] = typeof(global::Microsoft.Xaml.Interactivity.ActionCollection);
-            _typeTable[22] = typeof(global::System.String);
-            _typeTable[23] = typeof(global::Microsoft.Xaml.Interactions.Core.InvokeCommandAction);
-            _typeTable[24] = typeof(global::System.Windows.Input.ICommand);
-            _typeTable[25] = typeof(global::Windows.UI.Xaml.Data.IValueConverter);
-            _typeTable[26] = typeof(global::MyRecipe.MyUserControl.ItemControl);
-            _typeTable[27] = typeof(global::System.Boolean);
-            _typeTable[28] = typeof(global::MyRecipe.MainPage);
-            _typeTable[29] = typeof(global::MyRecipe.MyUserControl.JMessboxControl);
-            _typeTable[30] = typeof(global::MyRecipe.MyUserControl.PictureControl);
-            _typeTable[31] = typeof(global::MyRecipe.SubMainPage);
+            _typeTable[15] = typeof(global::MyRecipe.MyUserControl.MsgBoxControl);
+            _typeTable[16] = typeof(global::System.String);
+            _typeTable[17] = typeof(global::MyRecipe.FoodDetailPage);
+            _typeTable[18] = typeof(global::Microsoft.Xaml.Interactivity.Interaction);
+            _typeTable[19] = typeof(global::Microsoft.Xaml.Interactivity.BehaviorCollection);
+            _typeTable[20] = typeof(global::Windows.UI.Xaml.DependencyObjectCollection);
+            _typeTable[21] = typeof(global::Windows.UI.Xaml.DependencyObject);
+            _typeTable[22] = typeof(global::Microsoft.Xaml.Interactions.Core.EventTriggerBehavior);
+            _typeTable[23] = typeof(global::Microsoft.Xaml.Interactivity.ActionCollection);
+            _typeTable[24] = typeof(global::Microsoft.Xaml.Interactions.Core.InvokeCommandAction);
+            _typeTable[25] = typeof(global::System.Windows.Input.ICommand);
+            _typeTable[26] = typeof(global::Windows.UI.Xaml.Data.IValueConverter);
+            _typeTable[27] = typeof(global::MyRecipe.MyUserControl.ItemControl);
+            _typeTable[28] = typeof(global::System.Boolean);
+            _typeTable[29] = typeof(global::MyRecipe.MainPage);
+            _typeTable[30] = typeof(global::MyRecipe.MyUserControl.JMessboxControl);
+            _typeTable[31] = typeof(global::MyRecipe.MyUserControl.PictureControl);
+            _typeTable[32] = typeof(global::MyRecipe.SubMainPage);
         }
 
         private int LookupTypeIndexByName(string typeName)
@@ -235,23 +237,24 @@ namespace MyRecipe.MyRecipe_WindowsPhone_XamlTypeInfo
         private object Activate_12_FoodItemControl2() { return new global::MyRecipe.MyUserControl.FoodItemControl2(); }
         private object Activate_13_FoodItemControl() { return new global::MyRecipe.MyUserControl.FoodItemControl(); }
         private object Activate_14_DetailPage() { return new global::MyRecipe.DetailPage(); }
-        private object Activate_15_FoodDetailPage() { return new global::MyRecipe.FoodDetailPage(); }
-        private object Activate_17_BehaviorCollection() { return new global::Microsoft.Xaml.Interactivity.BehaviorCollection(); }
-        private object Activate_20_EventTriggerBehavior() { return new global::Microsoft.Xaml.Interactions.Core.EventTriggerBehavior(); }
-        private object Activate_21_ActionCollection() { return new global::Microsoft.Xaml.Interactivity.ActionCollection(); }
-        private object Activate_23_InvokeCommandAction() { return new global::Microsoft.Xaml.Interactions.Core.InvokeCommandAction(); }
-        private object Activate_26_ItemControl() { return new global::MyRecipe.MyUserControl.ItemControl(); }
-        private object Activate_28_MainPage() { return new global::MyRecipe.MainPage(); }
-        private object Activate_29_JMessboxControl() { return new global::MyRecipe.MyUserControl.JMessboxControl(); }
-        private object Activate_30_PictureControl() { return new global::MyRecipe.MyUserControl.PictureControl(); }
-        private object Activate_31_SubMainPage() { return new global::MyRecipe.SubMainPage(); }
-        private void VectorAdd_17_BehaviorCollection(object instance, object item)
+        private object Activate_15_MsgBoxControl() { return new global::MyRecipe.MyUserControl.MsgBoxControl(); }
+        private object Activate_17_FoodDetailPage() { return new global::MyRecipe.FoodDetailPage(); }
+        private object Activate_19_BehaviorCollection() { return new global::Microsoft.Xaml.Interactivity.BehaviorCollection(); }
+        private object Activate_22_EventTriggerBehavior() { return new global::Microsoft.Xaml.Interactions.Core.EventTriggerBehavior(); }
+        private object Activate_23_ActionCollection() { return new global::Microsoft.Xaml.Interactivity.ActionCollection(); }
+        private object Activate_24_InvokeCommandAction() { return new global::Microsoft.Xaml.Interactions.Core.InvokeCommandAction(); }
+        private object Activate_27_ItemControl() { return new global::MyRecipe.MyUserControl.ItemControl(); }
+        private object Activate_29_MainPage() { return new global::MyRecipe.MainPage(); }
+        private object Activate_30_JMessboxControl() { return new global::MyRecipe.MyUserControl.JMessboxControl(); }
+        private object Activate_31_PictureControl() { return new global::MyRecipe.MyUserControl.PictureControl(); }
+        private object Activate_32_SubMainPage() { return new global::MyRecipe.SubMainPage(); }
+        private void VectorAdd_19_BehaviorCollection(object instance, object item)
         {
             var collection = (global::System.Collections.Generic.ICollection<global::Windows.UI.Xaml.DependencyObject>)instance;
             var newItem = (global::Windows.UI.Xaml.DependencyObject)item;
             collection.Add(newItem);
         }
-        private void VectorAdd_21_ActionCollection(object instance, object item)
+        private void VectorAdd_23_ActionCollection(object instance, object item)
         {
             var collection = (global::System.Collections.Generic.ICollection<global::Windows.UI.Xaml.DependencyObject>)instance;
             var newItem = (global::Windows.UI.Xaml.DependencyObject)item;
@@ -359,37 +362,49 @@ namespace MyRecipe.MyRecipe_WindowsPhone_XamlTypeInfo
                 xamlType = userType;
                 break;
 
-            case 15:   //  MyRecipe.FoodDetailPage
-                userType = new global::MyRecipe.MyRecipe_WindowsPhone_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Windows.UI.Xaml.Controls.Page"));
-                userType.Activator = Activate_15_FoodDetailPage;
+            case 15:   //  MyRecipe.MyUserControl.MsgBoxControl
+                userType = new global::MyRecipe.MyRecipe_WindowsPhone_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Windows.UI.Xaml.Controls.UserControl"));
+                userType.Activator = Activate_15_MsgBoxControl;
+                userType.AddMemberName("MsgText");
                 userType.SetIsLocalType();
                 xamlType = userType;
                 break;
 
-            case 16:   //  Microsoft.Xaml.Interactivity.Interaction
+            case 16:   //  String
+                xamlType = new global::MyRecipe.MyRecipe_WindowsPhone_XamlTypeInfo.XamlSystemBaseType(typeName, type);
+                break;
+
+            case 17:   //  MyRecipe.FoodDetailPage
+                userType = new global::MyRecipe.MyRecipe_WindowsPhone_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Windows.UI.Xaml.Controls.Page"));
+                userType.Activator = Activate_17_FoodDetailPage;
+                userType.SetIsLocalType();
+                xamlType = userType;
+                break;
+
+            case 18:   //  Microsoft.Xaml.Interactivity.Interaction
                 userType = new global::MyRecipe.MyRecipe_WindowsPhone_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Object"));
                 userType.AddMemberName("Behaviors");
                 xamlType = userType;
                 break;
 
-            case 17:   //  Microsoft.Xaml.Interactivity.BehaviorCollection
+            case 19:   //  Microsoft.Xaml.Interactivity.BehaviorCollection
                 userType = new global::MyRecipe.MyRecipe_WindowsPhone_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Windows.UI.Xaml.DependencyObjectCollection"));
-                userType.CollectionAdd = VectorAdd_17_BehaviorCollection;
+                userType.CollectionAdd = VectorAdd_19_BehaviorCollection;
                 userType.SetIsReturnTypeStub();
                 xamlType = userType;
                 break;
 
-            case 18:   //  Windows.UI.Xaml.DependencyObjectCollection
+            case 20:   //  Windows.UI.Xaml.DependencyObjectCollection
                 xamlType = new global::MyRecipe.MyRecipe_WindowsPhone_XamlTypeInfo.XamlSystemBaseType(typeName, type);
                 break;
 
-            case 19:   //  Windows.UI.Xaml.DependencyObject
+            case 21:   //  Windows.UI.Xaml.DependencyObject
                 xamlType = new global::MyRecipe.MyRecipe_WindowsPhone_XamlTypeInfo.XamlSystemBaseType(typeName, type);
                 break;
 
-            case 20:   //  Microsoft.Xaml.Interactions.Core.EventTriggerBehavior
+            case 22:   //  Microsoft.Xaml.Interactions.Core.EventTriggerBehavior
                 userType = new global::MyRecipe.MyRecipe_WindowsPhone_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Windows.UI.Xaml.DependencyObject"));
-                userType.Activator = Activate_20_EventTriggerBehavior;
+                userType.Activator = Activate_22_EventTriggerBehavior;
                 userType.SetContentPropertyName("Microsoft.Xaml.Interactions.Core.EventTriggerBehavior.Actions");
                 userType.AddMemberName("Actions");
                 userType.AddMemberName("EventName");
@@ -398,20 +413,16 @@ namespace MyRecipe.MyRecipe_WindowsPhone_XamlTypeInfo
                 xamlType = userType;
                 break;
 
-            case 21:   //  Microsoft.Xaml.Interactivity.ActionCollection
+            case 23:   //  Microsoft.Xaml.Interactivity.ActionCollection
                 userType = new global::MyRecipe.MyRecipe_WindowsPhone_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Windows.UI.Xaml.DependencyObjectCollection"));
-                userType.CollectionAdd = VectorAdd_21_ActionCollection;
+                userType.CollectionAdd = VectorAdd_23_ActionCollection;
                 userType.SetIsReturnTypeStub();
                 xamlType = userType;
                 break;
 
-            case 22:   //  String
-                xamlType = new global::MyRecipe.MyRecipe_WindowsPhone_XamlTypeInfo.XamlSystemBaseType(typeName, type);
-                break;
-
-            case 23:   //  Microsoft.Xaml.Interactions.Core.InvokeCommandAction
+            case 24:   //  Microsoft.Xaml.Interactions.Core.InvokeCommandAction
                 userType = new global::MyRecipe.MyRecipe_WindowsPhone_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Windows.UI.Xaml.DependencyObject"));
-                userType.Activator = Activate_23_InvokeCommandAction;
+                userType.Activator = Activate_24_InvokeCommandAction;
                 userType.AddMemberName("Command");
                 userType.AddMemberName("CommandParameter");
                 userType.AddMemberName("InputConverter");
@@ -420,52 +431,52 @@ namespace MyRecipe.MyRecipe_WindowsPhone_XamlTypeInfo
                 xamlType = userType;
                 break;
 
-            case 24:   //  System.Windows.Input.ICommand
+            case 25:   //  System.Windows.Input.ICommand
                 userType = new global::MyRecipe.MyRecipe_WindowsPhone_XamlTypeInfo.XamlUserType(this, typeName, type, null);
                 userType.SetIsReturnTypeStub();
                 xamlType = userType;
                 break;
 
-            case 25:   //  Windows.UI.Xaml.Data.IValueConverter
+            case 26:   //  Windows.UI.Xaml.Data.IValueConverter
                 xamlType = new global::MyRecipe.MyRecipe_WindowsPhone_XamlTypeInfo.XamlSystemBaseType(typeName, type);
                 break;
 
-            case 26:   //  MyRecipe.MyUserControl.ItemControl
+            case 27:   //  MyRecipe.MyUserControl.ItemControl
                 userType = new global::MyRecipe.MyRecipe_WindowsPhone_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Windows.UI.Xaml.Controls.UserControl"));
-                userType.Activator = Activate_26_ItemControl;
+                userType.Activator = Activate_27_ItemControl;
                 userType.AddMemberName("IsFlod");
                 userType.SetIsLocalType();
                 xamlType = userType;
                 break;
 
-            case 27:   //  Boolean
+            case 28:   //  Boolean
                 xamlType = new global::MyRecipe.MyRecipe_WindowsPhone_XamlTypeInfo.XamlSystemBaseType(typeName, type);
                 break;
 
-            case 28:   //  MyRecipe.MainPage
+            case 29:   //  MyRecipe.MainPage
                 userType = new global::MyRecipe.MyRecipe_WindowsPhone_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Windows.UI.Xaml.Controls.Page"));
-                userType.Activator = Activate_28_MainPage;
+                userType.Activator = Activate_29_MainPage;
                 userType.SetIsLocalType();
                 xamlType = userType;
                 break;
 
-            case 29:   //  MyRecipe.MyUserControl.JMessboxControl
+            case 30:   //  MyRecipe.MyUserControl.JMessboxControl
                 userType = new global::MyRecipe.MyRecipe_WindowsPhone_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Windows.UI.Xaml.Controls.UserControl"));
-                userType.Activator = Activate_29_JMessboxControl;
+                userType.Activator = Activate_30_JMessboxControl;
                 userType.SetIsLocalType();
                 xamlType = userType;
                 break;
 
-            case 30:   //  MyRecipe.MyUserControl.PictureControl
+            case 31:   //  MyRecipe.MyUserControl.PictureControl
                 userType = new global::MyRecipe.MyRecipe_WindowsPhone_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Windows.UI.Xaml.Controls.UserControl"));
-                userType.Activator = Activate_30_PictureControl;
+                userType.Activator = Activate_31_PictureControl;
                 userType.SetIsLocalType();
                 xamlType = userType;
                 break;
 
-            case 31:   //  MyRecipe.SubMainPage
+            case 32:   //  MyRecipe.SubMainPage
                 userType = new global::MyRecipe.MyRecipe_WindowsPhone_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Windows.UI.Xaml.Controls.Page"));
-                userType.Activator = Activate_31_SubMainPage;
+                userType.Activator = Activate_32_SubMainPage;
                 userType.SetIsLocalType();
                 xamlType = userType;
                 break;
@@ -479,100 +490,110 @@ namespace MyRecipe.MyRecipe_WindowsPhone_XamlTypeInfo
             var that = (global::MyRecipe.ViewModel.ViewModelLocator)instance;
             return that.Main;
         }
-        private object get_1_Interaction_Behaviors(object instance)
+        private object get_1_MsgBoxControl_MsgText(object instance)
+        {
+            var that = (global::MyRecipe.MyUserControl.MsgBoxControl)instance;
+            return that.MsgText;
+        }
+        private void set_1_MsgBoxControl_MsgText(object instance, object Value)
+        {
+            var that = (global::MyRecipe.MyUserControl.MsgBoxControl)instance;
+            that.MsgText = (global::System.String)Value;
+        }
+        private object get_2_Interaction_Behaviors(object instance)
         {
             return global::Microsoft.Xaml.Interactivity.Interaction.GetBehaviors((global::Windows.UI.Xaml.DependencyObject)instance);
         }
-        private void set_1_Interaction_Behaviors(object instance, object Value)
+        private void set_2_Interaction_Behaviors(object instance, object Value)
         {
             global::Microsoft.Xaml.Interactivity.Interaction.SetBehaviors((global::Windows.UI.Xaml.DependencyObject)instance, (global::Microsoft.Xaml.Interactivity.BehaviorCollection)Value);
         }
-        private object get_2_EventTriggerBehavior_Actions(object instance)
+        private object get_3_EventTriggerBehavior_Actions(object instance)
         {
             var that = (global::Microsoft.Xaml.Interactions.Core.EventTriggerBehavior)instance;
             return that.Actions;
         }
-        private object get_3_EventTriggerBehavior_EventName(object instance)
+        private object get_4_EventTriggerBehavior_EventName(object instance)
         {
             var that = (global::Microsoft.Xaml.Interactions.Core.EventTriggerBehavior)instance;
             return that.EventName;
         }
-        private void set_3_EventTriggerBehavior_EventName(object instance, object Value)
+        private void set_4_EventTriggerBehavior_EventName(object instance, object Value)
         {
             var that = (global::Microsoft.Xaml.Interactions.Core.EventTriggerBehavior)instance;
             that.EventName = (global::System.String)Value;
         }
-        private object get_4_EventTriggerBehavior_SourceObject(object instance)
+        private object get_5_EventTriggerBehavior_SourceObject(object instance)
         {
             var that = (global::Microsoft.Xaml.Interactions.Core.EventTriggerBehavior)instance;
             return that.SourceObject;
         }
-        private void set_4_EventTriggerBehavior_SourceObject(object instance, object Value)
+        private void set_5_EventTriggerBehavior_SourceObject(object instance, object Value)
         {
             var that = (global::Microsoft.Xaml.Interactions.Core.EventTriggerBehavior)instance;
             that.SourceObject = (global::System.Object)Value;
         }
-        private object get_5_EventTriggerBehavior_AssociatedObject(object instance)
+        private object get_6_EventTriggerBehavior_AssociatedObject(object instance)
         {
             var that = (global::Microsoft.Xaml.Interactions.Core.EventTriggerBehavior)instance;
             return that.AssociatedObject;
         }
-        private object get_6_InvokeCommandAction_Command(object instance)
+        private object get_7_InvokeCommandAction_Command(object instance)
         {
             var that = (global::Microsoft.Xaml.Interactions.Core.InvokeCommandAction)instance;
             return that.Command;
         }
-        private void set_6_InvokeCommandAction_Command(object instance, object Value)
+        private void set_7_InvokeCommandAction_Command(object instance, object Value)
         {
             var that = (global::Microsoft.Xaml.Interactions.Core.InvokeCommandAction)instance;
             that.Command = (global::System.Windows.Input.ICommand)Value;
         }
-        private object get_7_InvokeCommandAction_CommandParameter(object instance)
+        private object get_8_InvokeCommandAction_CommandParameter(object instance)
         {
             var that = (global::Microsoft.Xaml.Interactions.Core.InvokeCommandAction)instance;
             return that.CommandParameter;
         }
-        private void set_7_InvokeCommandAction_CommandParameter(object instance, object Value)
+        private void set_8_InvokeCommandAction_CommandParameter(object instance, object Value)
         {
             var that = (global::Microsoft.Xaml.Interactions.Core.InvokeCommandAction)instance;
             that.CommandParameter = (global::System.Object)Value;
         }
-        private object get_8_InvokeCommandAction_InputConverter(object instance)
+        private object get_9_InvokeCommandAction_InputConverter(object instance)
         {
             var that = (global::Microsoft.Xaml.Interactions.Core.InvokeCommandAction)instance;
             return that.InputConverter;
         }
-        private void set_8_InvokeCommandAction_InputConverter(object instance, object Value)
+        private void set_9_InvokeCommandAction_InputConverter(object instance, object Value)
         {
             var that = (global::Microsoft.Xaml.Interactions.Core.InvokeCommandAction)instance;
             that.InputConverter = (global::Windows.UI.Xaml.Data.IValueConverter)Value;
         }
-        private object get_9_InvokeCommandAction_InputConverterParameter(object instance)
+        private object get_10_InvokeCommandAction_InputConverterParameter(object instance)
         {
             var that = (global::Microsoft.Xaml.Interactions.Core.InvokeCommandAction)instance;
             return that.InputConverterParameter;
         }
-        private void set_9_InvokeCommandAction_InputConverterParameter(object instance, object Value)
+        private void set_10_InvokeCommandAction_InputConverterParameter(object instance, object Value)
         {
             var that = (global::Microsoft.Xaml.Interactions.Core.InvokeCommandAction)instance;
             that.InputConverterParameter = (global::System.Object)Value;
         }
-        private object get_10_InvokeCommandAction_InputConverterLanguage(object instance)
+        private object get_11_InvokeCommandAction_InputConverterLanguage(object instance)
         {
             var that = (global::Microsoft.Xaml.Interactions.Core.InvokeCommandAction)instance;
             return that.InputConverterLanguage;
         }
-        private void set_10_InvokeCommandAction_InputConverterLanguage(object instance, object Value)
+        private void set_11_InvokeCommandAction_InputConverterLanguage(object instance, object Value)
         {
             var that = (global::Microsoft.Xaml.Interactions.Core.InvokeCommandAction)instance;
             that.InputConverterLanguage = (global::System.String)Value;
         }
-        private object get_11_ItemControl_IsFlod(object instance)
+        private object get_12_ItemControl_IsFlod(object instance)
         {
             var that = (global::MyRecipe.MyUserControl.ItemControl)instance;
             return that.IsFlod;
         }
-        private void set_11_ItemControl_IsFlod(object instance, object Value)
+        private void set_12_ItemControl_IsFlod(object instance, object Value)
         {
             var that = (global::MyRecipe.MyUserControl.ItemControl)instance;
             that.IsFlod = (global::System.Boolean)Value;
@@ -591,81 +612,88 @@ namespace MyRecipe.MyRecipe_WindowsPhone_XamlTypeInfo
                 xamlMember.Getter = get_0_ViewModelLocator_Main;
                 xamlMember.SetIsReadOnly();
                 break;
+            case "MyRecipe.MyUserControl.MsgBoxControl.MsgText":
+                userType = (global::MyRecipe.MyRecipe_WindowsPhone_XamlTypeInfo.XamlUserType)GetXamlTypeByName("MyRecipe.MyUserControl.MsgBoxControl");
+                xamlMember = new global::MyRecipe.MyRecipe_WindowsPhone_XamlTypeInfo.XamlMember(this, "MsgText", "String");
+                xamlMember.SetIsDependencyProperty();
+                xamlMember.Getter = get_1_MsgBoxControl_MsgText;
+                xamlMember.Setter = set_1_MsgBoxControl_MsgText;
+                break;
             case "Microsoft.Xaml.Interactivity.Interaction.Behaviors":
                 userType = (global::MyRecipe.MyRecipe_WindowsPhone_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.Xaml.Interactivity.Interaction");
                 xamlMember = new global::MyRecipe.MyRecipe_WindowsPhone_XamlTypeInfo.XamlMember(this, "Behaviors", "Microsoft.Xaml.Interactivity.BehaviorCollection");
                 xamlMember.SetTargetTypeName("Windows.UI.Xaml.DependencyObject");
                 xamlMember.SetIsAttachable();
-                xamlMember.Getter = get_1_Interaction_Behaviors;
-                xamlMember.Setter = set_1_Interaction_Behaviors;
+                xamlMember.Getter = get_2_Interaction_Behaviors;
+                xamlMember.Setter = set_2_Interaction_Behaviors;
                 break;
             case "Microsoft.Xaml.Interactions.Core.EventTriggerBehavior.Actions":
                 userType = (global::MyRecipe.MyRecipe_WindowsPhone_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.Xaml.Interactions.Core.EventTriggerBehavior");
                 xamlMember = new global::MyRecipe.MyRecipe_WindowsPhone_XamlTypeInfo.XamlMember(this, "Actions", "Microsoft.Xaml.Interactivity.ActionCollection");
                 xamlMember.SetIsDependencyProperty();
-                xamlMember.Getter = get_2_EventTriggerBehavior_Actions;
+                xamlMember.Getter = get_3_EventTriggerBehavior_Actions;
                 xamlMember.SetIsReadOnly();
                 break;
             case "Microsoft.Xaml.Interactions.Core.EventTriggerBehavior.EventName":
                 userType = (global::MyRecipe.MyRecipe_WindowsPhone_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.Xaml.Interactions.Core.EventTriggerBehavior");
                 xamlMember = new global::MyRecipe.MyRecipe_WindowsPhone_XamlTypeInfo.XamlMember(this, "EventName", "String");
                 xamlMember.SetIsDependencyProperty();
-                xamlMember.Getter = get_3_EventTriggerBehavior_EventName;
-                xamlMember.Setter = set_3_EventTriggerBehavior_EventName;
+                xamlMember.Getter = get_4_EventTriggerBehavior_EventName;
+                xamlMember.Setter = set_4_EventTriggerBehavior_EventName;
                 break;
             case "Microsoft.Xaml.Interactions.Core.EventTriggerBehavior.SourceObject":
                 userType = (global::MyRecipe.MyRecipe_WindowsPhone_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.Xaml.Interactions.Core.EventTriggerBehavior");
                 xamlMember = new global::MyRecipe.MyRecipe_WindowsPhone_XamlTypeInfo.XamlMember(this, "SourceObject", "Object");
                 xamlMember.SetIsDependencyProperty();
-                xamlMember.Getter = get_4_EventTriggerBehavior_SourceObject;
-                xamlMember.Setter = set_4_EventTriggerBehavior_SourceObject;
+                xamlMember.Getter = get_5_EventTriggerBehavior_SourceObject;
+                xamlMember.Setter = set_5_EventTriggerBehavior_SourceObject;
                 break;
             case "Microsoft.Xaml.Interactions.Core.EventTriggerBehavior.AssociatedObject":
                 userType = (global::MyRecipe.MyRecipe_WindowsPhone_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.Xaml.Interactions.Core.EventTriggerBehavior");
                 xamlMember = new global::MyRecipe.MyRecipe_WindowsPhone_XamlTypeInfo.XamlMember(this, "AssociatedObject", "Windows.UI.Xaml.DependencyObject");
-                xamlMember.Getter = get_5_EventTriggerBehavior_AssociatedObject;
+                xamlMember.Getter = get_6_EventTriggerBehavior_AssociatedObject;
                 xamlMember.SetIsReadOnly();
                 break;
             case "Microsoft.Xaml.Interactions.Core.InvokeCommandAction.Command":
                 userType = (global::MyRecipe.MyRecipe_WindowsPhone_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.Xaml.Interactions.Core.InvokeCommandAction");
                 xamlMember = new global::MyRecipe.MyRecipe_WindowsPhone_XamlTypeInfo.XamlMember(this, "Command", "System.Windows.Input.ICommand");
                 xamlMember.SetIsDependencyProperty();
-                xamlMember.Getter = get_6_InvokeCommandAction_Command;
-                xamlMember.Setter = set_6_InvokeCommandAction_Command;
+                xamlMember.Getter = get_7_InvokeCommandAction_Command;
+                xamlMember.Setter = set_7_InvokeCommandAction_Command;
                 break;
             case "Microsoft.Xaml.Interactions.Core.InvokeCommandAction.CommandParameter":
                 userType = (global::MyRecipe.MyRecipe_WindowsPhone_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.Xaml.Interactions.Core.InvokeCommandAction");
                 xamlMember = new global::MyRecipe.MyRecipe_WindowsPhone_XamlTypeInfo.XamlMember(this, "CommandParameter", "Object");
                 xamlMember.SetIsDependencyProperty();
-                xamlMember.Getter = get_7_InvokeCommandAction_CommandParameter;
-                xamlMember.Setter = set_7_InvokeCommandAction_CommandParameter;
+                xamlMember.Getter = get_8_InvokeCommandAction_CommandParameter;
+                xamlMember.Setter = set_8_InvokeCommandAction_CommandParameter;
                 break;
             case "Microsoft.Xaml.Interactions.Core.InvokeCommandAction.InputConverter":
                 userType = (global::MyRecipe.MyRecipe_WindowsPhone_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.Xaml.Interactions.Core.InvokeCommandAction");
                 xamlMember = new global::MyRecipe.MyRecipe_WindowsPhone_XamlTypeInfo.XamlMember(this, "InputConverter", "Windows.UI.Xaml.Data.IValueConverter");
                 xamlMember.SetIsDependencyProperty();
-                xamlMember.Getter = get_8_InvokeCommandAction_InputConverter;
-                xamlMember.Setter = set_8_InvokeCommandAction_InputConverter;
+                xamlMember.Getter = get_9_InvokeCommandAction_InputConverter;
+                xamlMember.Setter = set_9_InvokeCommandAction_InputConverter;
                 break;
             case "Microsoft.Xaml.Interactions.Core.InvokeCommandAction.InputConverterParameter":
                 userType = (global::MyRecipe.MyRecipe_WindowsPhone_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.Xaml.Interactions.Core.InvokeCommandAction");
                 xamlMember = new global::MyRecipe.MyRecipe_WindowsPhone_XamlTypeInfo.XamlMember(this, "InputConverterParameter", "Object");
                 xamlMember.SetIsDependencyProperty();
-                xamlMember.Getter = get_9_InvokeCommandAction_InputConverterParameter;
-                xamlMember.Setter = set_9_InvokeCommandAction_InputConverterParameter;
+                xamlMember.Getter = get_10_InvokeCommandAction_InputConverterParameter;
+                xamlMember.Setter = set_10_InvokeCommandAction_InputConverterParameter;
                 break;
             case "Microsoft.Xaml.Interactions.Core.InvokeCommandAction.InputConverterLanguage":
                 userType = (global::MyRecipe.MyRecipe_WindowsPhone_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.Xaml.Interactions.Core.InvokeCommandAction");
                 xamlMember = new global::MyRecipe.MyRecipe_WindowsPhone_XamlTypeInfo.XamlMember(this, "InputConverterLanguage", "String");
                 xamlMember.SetIsDependencyProperty();
-                xamlMember.Getter = get_10_InvokeCommandAction_InputConverterLanguage;
-                xamlMember.Setter = set_10_InvokeCommandAction_InputConverterLanguage;
+                xamlMember.Getter = get_11_InvokeCommandAction_InputConverterLanguage;
+                xamlMember.Setter = set_11_InvokeCommandAction_InputConverterLanguage;
                 break;
             case "MyRecipe.MyUserControl.ItemControl.IsFlod":
                 userType = (global::MyRecipe.MyRecipe_WindowsPhone_XamlTypeInfo.XamlUserType)GetXamlTypeByName("MyRecipe.MyUserControl.ItemControl");
                 xamlMember = new global::MyRecipe.MyRecipe_WindowsPhone_XamlTypeInfo.XamlMember(this, "IsFlod", "Boolean");
-                xamlMember.Getter = get_11_ItemControl_IsFlod;
-                xamlMember.Setter = set_11_ItemControl_IsFlod;
+                xamlMember.Getter = get_12_ItemControl_IsFlod;
+                xamlMember.Setter = set_12_ItemControl_IsFlod;
                 break;
             }
             return xamlMember;

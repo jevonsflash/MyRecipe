@@ -32,9 +32,17 @@ namespace MyRecipe.Server
         }
         public Model.FoodShowItem FoodObjectDeserializer(string jsonStr)
         {
-            JToken ja = (JToken)JsonConvert.DeserializeObject(jsonStr);
-            return JTokenToModel(ja);
+            try
+            {
+                JToken ja = (JToken)JsonConvert.DeserializeObject(jsonStr);
+                FoodShowItem result = JTokenToModel(ja);
+                return result;
+            }
+            catch (Exception)
+            {
 
+                return null;
+            }
         }
 
         private FoodShowItem JTokenToModel(JToken item)

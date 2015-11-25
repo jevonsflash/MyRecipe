@@ -2,6 +2,7 @@ Cook.xml
 Img\default.png
 Img\Header.png
 Img\Header2.png
+Img\UserContro.png
 Assets\bg1.jpg
 Assets\Logo.scale-240.png
 Assets\SmallLogo.scale-240.png
@@ -20,6 +21,7 @@ MyUserControl\FoodItemControl.xbf
 MyUserControl\FoodItemControl2.xbf
 MyUserControl\ItemControl.xbf
 MyUserControl\JMessboxControl.xbf
+MyUserControl\MsgBoxControl.xbf
 MyUserControl\PictureControl.xbf
 SubMainPage.xbf
 Ico\about.png

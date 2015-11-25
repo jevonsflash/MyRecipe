@@ -32,7 +32,7 @@ namespace MyRecipe.MyUserControl
         private void ItemControl_Loaded(object sender, RoutedEventArgs e)
         {
             InitGrid();
-            this.GDTitle.Background = new SolidColorBrush(Helper.ColorGenerator.GetColorGroup1());
+            //this.GDTitle.Background = new SolidColorBrush(Helper.ColorGenerator.GetColorGroup1());
         }
 
         private void Grid_Tapped(object sender, TappedRoutedEventArgs e)

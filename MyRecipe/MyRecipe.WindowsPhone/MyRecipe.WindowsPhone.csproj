@@ -15,6 +15,8 @@
     <FileAlignment>512</FileAlignment>
     <ProjectTypeGuids>{76F1466A-8B6D-4E39-A767-685A06062A39};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
     <SynthesizeLinkMetadata>true</SynthesizeLinkMetadata>
+    <AppxAutoIncrementPackageRevision>True</AppxAutoIncrementPackageRevision>
+    <AppxBundlePlatforms>neutral</AppxBundlePlatforms>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <PlatformTarget>AnyCPU</PlatformTarget>
@@ -107,6 +109,9 @@
     <Compile Include="MyUserControl\JMessboxControl.xaml.cs">
       <DependentUpon>JMessboxControl.xaml</DependentUpon>
     </Compile>
+    <Compile Include="MyUserControl\MsgBoxControl.xaml.cs">
+      <DependentUpon>MsgBoxControl.xaml</DependentUpon>
+    </Compile>
     <Compile Include="MyUserControl\PictureControl.xaml.cs">
       <DependentUpon>PictureControl.xaml</DependentUpon>
     </Compile>
@@ -131,6 +136,7 @@
     <Content Include="Assets\WideLogo.scale-240.png" />
     <Content Include="Ico\about.png" />
     <Content Include="Ico\search.png" />
+    <None Include="Package.StoreAssociation.xml" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="GalaSoft.MvvmLight, Version=5.2.0.37222, Culture=neutral, PublicKeyToken=e7570ab207bcb616, processorArchitecture=MSIL">
@@ -194,6 +200,10 @@
     <Page Include="MyUserControl\JMessboxControl.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="MyUserControl\MsgBoxControl.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
     </Page>
     <Page Include="MyUserControl\PictureControl.xaml">
       <SubType>Designer</SubType>

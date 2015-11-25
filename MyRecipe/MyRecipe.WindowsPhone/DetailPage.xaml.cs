@@ -8,6 +8,7 @@ using System.Linq;
 using System.Runtime.InteropServices.WindowsRuntime;
 using Windows.Foundation;
 using Windows.Foundation.Collections;
+using Windows.UI.ViewManagement;
 using Windows.UI.Xaml;
 using Windows.UI.Xaml.Controls;
 using Windows.UI.Xaml.Controls.Primitives;
@@ -41,8 +42,16 @@ namespace MyRecipe
         {
             var t = e.Parameter.ToString();
             Messenger.Default.Send<string>(t, StaticMsgToken.NavigationA);
+            StatusBar sb = StatusBar.GetForCurrentView();
+            sb.HideAsync();
+
         }
 
+        protected override void OnNavigatedFrom(NavigationEventArgs e)
+        {
+            StatusBar sb = StatusBar.GetForCurrentView();
+            sb.ShowAsync();
+        }
         private void WV_Loaded(object sender, RoutedEventArgs e)
         {
 

@@ -25,11 +25,11 @@
                     <Grid.ColumnDefinitions>
                         <ColumnDefinition Width="Auto"/>
                         <ColumnDefinition Width="Auto"/>
-                        <ColumnDefinition Width="150"/>
+                        <ColumnDefinition Width="Auto"/>
                     </Grid.ColumnDefinitions>
                     <Image Grid.Column="0" Source="Img/Header.png"/>
                     <TextBlock Margin="5,0" Grid.Column="1" FontSize="32" Foreground="LightYellow" VerticalAlignment="Center" FontWeight="Bold">
-						<Run Text="天天食疗"/>
+						<Run Text="健康食疗菜谱"/>
                     </TextBlock>
                     <StackPanel Grid.Column="2" Orientation="Vertical" HorizontalAlignment="Right" VerticalAlignment="Top">
                         <Image Height="50" Source="Ico/about.png"></Image>

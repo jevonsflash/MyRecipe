@@ -6,7 +6,7 @@
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     mc:Ignorable="d"
-    d:DesignHeight="200"
+    d:DesignHeight="120"
     d:DesignWidth="200">
     <UserControl.Resources>
         <ResourceDictionary>
@@ -22,8 +22,9 @@
 
         </ResourceDictionary>
     </UserControl.Resources>
-    <Grid>
-        <GridView 
+    <Grid Height="120">
+        <ScrollViewer>
+            <GridView 
                   Name="GVCon"
                   Background="Transparent"
                   ItemsSource="{Binding Mode=OneWay}"
@@ -33,7 +34,7 @@
                   SelectionMode="None"
                   IsItemClickEnabled="True"
                   ItemClick="GVCon_ItemClick">
-        </GridView>
-        
+            </GridView>
+        </ScrollViewer>
     </Grid>
 </UserControl>
