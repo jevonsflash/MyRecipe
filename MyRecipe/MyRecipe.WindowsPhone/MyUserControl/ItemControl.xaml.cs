@@ -47,10 +47,13 @@ namespace MyRecipe.MyUserControl
             if (IsFlod)
             {
                 this.GVCon.MaxHeight = 0;
+                VisualStateManager.GoToState(this, "Release", false);
             }
             else
             {
                 this.GVCon.MaxHeight = double.MaxValue;
+                VisualStateManager.GoToState(this, "Checked", false);
+
             }
         }
 

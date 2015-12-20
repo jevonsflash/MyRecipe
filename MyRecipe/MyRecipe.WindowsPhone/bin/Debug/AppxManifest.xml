@@ -7,7 +7,7 @@
 
   有关程序包清单文件的详细信息，请参阅 http://go.microsoft.com/fwlink/?LinkID=241727
  -->
-  <Identity Name="27272linxiao.385457DA978AC" Publisher="CN=66CEE570-ACBF-4104-8CBB-C23C997CC5A8" Version="1.1.0.0" ProcessorArchitecture="neutral" />
+  <Identity Name="27272linxiao.385457DA978AC" Publisher="CN=66CEE570-ACBF-4104-8CBB-C23C997CC5A8" Version="1.1.0.1" ProcessorArchitecture="neutral" />
   <mp:PhoneIdentity PhoneProductId="18659bfa-9c9b-4668-ad9e-df3879f0107b" PhonePublisherId="00000000-0000-0000-0000-000000000000" />
   <Properties>
     <DisplayName>健康食疗菜谱</DisplayName>

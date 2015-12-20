@@ -45,7 +45,7 @@ namespace MyRecipe.ViewModel
             GoWeiboCommand = new DelegateCommand();
             GoWeiboCommand.ExecuteAction = new Action<object>(GoWeibo);
 
-            Version = "1.0.0";
+            Version = "1.1.0";
             StrUpdate = new List<string>();
             StrUpdate.Add("暂无");
         }

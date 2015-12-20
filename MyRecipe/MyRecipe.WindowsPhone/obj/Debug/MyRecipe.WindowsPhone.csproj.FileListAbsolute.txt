@@ -221,3 +221,11 @@ D:\Project\C#\test\MyRecipe\MyRecipe\MyRecipe.WindowsPhone\obj\Debug\MyUserContr
 D:\Project\C#\test\MyRecipe\MyRecipe\MyRecipe.WindowsPhone\obj\Debug\MyUserControl\MsgBoxControl.xaml
 D:\Project\C#\test\MyRecipe\MyRecipe\MyRecipe.WindowsPhone\obj\Debug\MyUserControl\MsgBoxControl.xbf
 D:\Project\C#\test\MyRecipe\MyRecipe\MyRecipe.WindowsPhone\bin\Debug\MyUserControl\MsgBoxControl.xbf
+D:\Project\C#\test\MyRecipe\MyRecipe\MyRecipe.WindowsPhone\obj\Debug\Microsoft.Practices.ServiceLocation\layout.resfiles
+D:\Project\C#\test\MyRecipe\MyRecipe\MyRecipe.WindowsPhone\obj\Debug\Microsoft.Practices.ServiceLocation\layout.resfiles.intermediate
+D:\Project\C#\test\MyRecipe\MyRecipe\MyRecipe.WindowsPhone\obj\Debug\Microsoft.Practices.ServiceLocation\Resources.resfiles
+D:\Project\C#\test\MyRecipe\MyRecipe\MyRecipe.WindowsPhone\obj\Debug\Microsoft.Practices.ServiceLocation\Resources.resfiles.intermediate
+D:\Project\C#\test\MyRecipe\MyRecipe\MyRecipe.WindowsPhone\obj\Debug\Microsoft.Practices.ServiceLocation\pri.resfiles
+D:\Project\C#\test\MyRecipe\MyRecipe\MyRecipe.WindowsPhone\obj\Debug\Microsoft.Practices.ServiceLocation\pri.resfiles.intermediate
+D:\Project\C#\test\MyRecipe\MyRecipe\MyRecipe.WindowsPhone\obj\Debug\Microsoft.Practices.ServiceLocation\priconfig.xml
+D:\Project\C#\test\MyRecipe\MyRecipe\MyRecipe.WindowsPhone\obj\Debug\Microsoft.Practices.ServiceLocation\priconfig.xml.intermediate
